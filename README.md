@@ -5,47 +5,46 @@
 * [Installation Options](#installation-options)
 * [Snippets](#snippets)
   * [Require.js](#requirejs)
-    * [[config]](#config)
-    * [[define]    Require.js](#define-requirejs)
-    * [[load]    Require.js](#load-requirejs)
+    * [Require.js: [config]](#requirejs-config)
+    * [Require.js: [define]](#requirejs-define)
+    * [Require.js: [load]](#requirejs-load)
   * [Angular.js EE (Enterprise Edition)](#angularjs-ee-enterprise-edition)
-    * [[bootstrap]    Angular.js EE](#bootstrap-angularjs-ee)
-    * [[load]    Angular.js EE](#load-angularjs-ee)
-    * [[module]    Angular.js EE](#module-angularjs-ee)
-    * [[module-use]    Angular.js EE](#module-use-angularjs-ee)
-    * [[mock-load]    Angular.js EE](#mock-load-angularjs-ee)
-    * [[mock-pass-urls]    Angular.js EE](#mock-pass-urls-angularjs-ee)
-    * [[mock-pass-backend]    Angular.js EE](#mock-pass-backend-angularjs-ee)
-    * [[mock-data]    Angular.js EE](#mock-data-angularjs-ee)
-    * [[mock-backend]    Angular.js EE](#mock-backend-angularjs-ee)
-    * [[mock-urls]    Angular.js EE](#mock-urls-angularjs-ee)
-      * [[mock-w-all]    Angular.js EE](#mock-w-all-angularjs-ee)
-      * [[mock-w-one]    Angular.js EE](#mock-w-one-angularjs-ee)
-      * [[mock-w-post]    Angular.js EE](#mock-w-post-angularjs-ee)
-      * [[mock-w-put]    Angular.js EE](#mock-w-put-angularjs-ee)
-      * [[mock-w-delete]    Angular.js EE](#mock-w-delete-angularjs-ee)
-      * [[mock-w-search]    Angular.js EE](#mock-w-search-angularjs-ee)
+    * [Angular.js EE: [bootstrap]](#angularjs-ee-bootstrap)
+    * [Angular.js EE: [load]](#angularjs-ee-load)
+    * [Angular.js EE: [module]](#angularjs-ee-module)
+    * [Angular.js EE: [module-use]](#angularjs-ee-module-use)
+    * [Angular.js EE: [mock-load]](#angularjs-ee-mock-load)
+    * [Angular.js EE: [mock-pass-urls]](#angularjs-ee-mock-pass-urls)
+    * [Angular.js EE: [mock-pass-backend]](#angularjs-ee-mock-pass-backend)
+    * [Angular.js EE: [mock-data]](#angularjs-ee-mock-data)
+    * [Angular.js EE: [mock-backend]](#angularjs-ee-mock-backend)
+    * [Angular.js EE: [mock-urls]](#angularjs-ee-mock-urls)
+      * [Angular.js EE: [mock-w-all]](#angularjs-ee-mock-w-all)
+      * [Angular.js EE: [mock-w-one]](#angularjs-ee-mock-w-one)
+      * [Angular.js EE: [mock-w-post]](#angularjs-ee-mock-w-post)
+      * [Angular.js EE: [mock-w-put]](#angularjs-ee-mock-w-put)
+      * [Angular.js EE: [mock-w-delete]](#angularjs-ee-mock-w-delete)
+      * [Angular.js EE: [mock-w-search]](#angularjs-ee-mock-w-search)
   * [Angular.js](#angularjs)
-    * [Services](#services)
-      * [[angular]    Angular.js](#angular-angularjs)
-      * [[config]    Angular.js](#config-angularjs)
-      * [[constant]    Angular.js](#constant-angularjs)
-      * [[controller]    Angular.js](#controller-angularjs)
-      * [[decorator]    Angular.js](#decorator-angularjs)
-      * [[directive]    Angular.js](#directive-angularjs)
-      * [[directiveLong]    Angular.js](#directivelong-angularjs)
-      * [[factory]    Angular.js](#factory-angularjs)
-      * [[filter]    Angular.js](#filter-angularjs)
-      * [[module]    Angular.js](#module-angularjs)
-      * [[provider]    Angular.js](#provider-angularjs)
-      * [[resource-id]    Angular.js](#resource-id-angularjs)
-      * [[resource]    Angular.js](#resource-angularjs)
-      * [[routeProvider]    Angular.js](#routeprovider-angularjs)
-      * [[when]    Angular.js](#when-angularjs)
-      * [[otherwise]    Angular.js](#otherwise-angularjs)
-      * [[run]    Angular.js](#run-angularjs)
-      * [[service]    Angular.js](#service-angularjs)
-      * [[value]    Angular.js](#value-angularjs)
+    * [Angular.js: [angular]](#angularjs-angular)
+    * [Angular.js: [config]](#angularjs-config)
+    * [Angular.js: [constant]](#angularjs-constant)
+    * [Angular.js: [controller]](#angularjs-controller)
+    * [Angular.js: [decorator]](#angularjs-decorator)
+    * [Angular.js: [directive]](#angularjs-directive)
+    * [Angular.js: [directiveLong]](#angularjs-directivelong)
+    * [Angular.js: [factory]](#angularjs-factory)
+    * [Angular.js: [filter]](#angularjs-filter)
+    * [Angular.js: [module]](#angularjs-module)
+    * [Angular.js: [provider]](#angularjs-provider)
+    * [Angular.js: [resource-id]](#angularjs-resource-id)
+    * [Angular.js: [resource]](#angularjs-resource)
+    * [Angular.js: [routeProvider]](#angularjs-routeprovider)
+    * [Angular.js: [when]](#angularjs-when)
+    * [Angular.js: [otherwise]](#angularjs-otherwise)
+    * [Angular.js: [run]](#angularjs-run)
+    * [Angular.js: [service]](#angularjs-service)
+    * [Angular.js: [value]](#angularjs-value)
     * [Globals](#globals)
     * [jQuery lite](#jquery-lite)
     * [Scope functions](#scope-functions)
@@ -99,9 +98,11 @@ Below is a list of all triggers and respectives snippets currently supported on 
 
 ### Require.js
 
-#### [config]
+#### Require.js: [config]
 
-**Description:** <pre>config		Require.js</pre>
+**Description:** 
+
+<pre>config                  Require.js</pre>
 
 **Content:**
 
@@ -136,7 +137,13 @@ require({
 });
 ```
 
-#### [define]    Require.js
+#### Require.js: [define]
+
+**Description:** 
+
+<pre>define                  Require.js</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -154,7 +161,13 @@ function($2) {
 });
 ```
 
-#### [load]    Require.js
+#### Require.js: [load]
+
+**Description:** 
+
+<pre>load                  Require.js</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -170,7 +183,13 @@ function() {});
 
 ### Angular.js EE (Enterprise Edition)
 
-#### [bootstrap]    Angular.js EE
+#### Angular.js EE: [bootstrap]
+
+**Description:** 
+
+<pre>bootstrap                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -210,7 +229,13 @@ function(ng) {
 });
 ```
 
-#### [load]    Angular.js EE
+#### Angular.js EE: [load]
+
+**Description:** 
+
+<pre>load                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -226,7 +251,13 @@ ${1:  './resource',}
 function() {});
 ```
 
-#### [module]    Angular.js EE
+#### Angular.js EE: [module]
+
+**Description:** 
+
+<pre>module                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -256,7 +287,13 @@ function(${2:ng}) {
 });
 ```
 
-#### [module-use]    Angular.js EE
+#### Angular.js EE: [module-use]
+
+**Description:** 
+
+<pre>module-use                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -274,7 +311,13 @@ function(${3:module}) {
 });
 ```
 
-#### [mock-load]    Angular.js EE
+#### Angular.js EE: [mock-load]
+
+**Description:** 
+
+<pre>mock-load                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -292,7 +335,13 @@ define(
 function() {});
 ```
 
-#### [mock-pass-urls]    Angular.js EE
+#### Angular.js EE: [mock-pass-urls]
+
+**Description:** 
+
+<pre>mock-pass-urls                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -326,7 +375,13 @@ ${2:    // Allow GET users from GitHub API}
 });
 ```
 
-#### [mock-pass-backend]    Angular.js EE
+#### Angular.js EE: [mock-pass-backend]
+
+**Description:** 
+
+<pre>mock-pass-backend                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -389,9 +444,15 @@ ${4:    // search
 });
 ```
 
-#### [mock-data]    Angular.js EE
+#### Angular.js EE: [mock-data]
 
 > Use [LokiJS](http://lokijs.org/) to manage object collection
+
+**Description:** 
+
+<pre>mock-data                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -550,9 +611,15 @@ ${0:        collection.insert(
 });
 ```
 
-#### [mock-backend]    Angular.js EE
+#### Angular.js EE: [mock-backend]
 
 > Complete CRUD + Search
+
+**Description:** 
+
+<pre>mock-backend                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -705,7 +772,13 @@ ${9:    console.debug(collection.getById(1));
 });
 ```
 
-#### [mock-urls]    Angular.js EE
+#### Angular.js EE: [mock-urls]
+
+**Description:** 
+
+<pre>mock-urls                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 define(
@@ -744,9 +817,15 @@ function(ng, backend) {
 });
 ```
 
-##### [mock-w-all]    Angular.js EE
+##### Angular.js EE: [mock-w-all]
 
 > HTTP GET - all
+
+**Description:** 
+
+<pre>mock-w-all                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 // get all
@@ -771,9 +850,15 @@ ${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}(\?|\$)/))
   });
 ```
 
-##### [mock-w-one]    Angular.js EE
+##### Angular.js EE: [mock-w-one]
 
 > HTTP GET - one (by id)
+
+**Description:** 
+
+<pre>mock-w-one                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 // get one
@@ -796,9 +881,15 @@ ${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}(\/)?([A-z0-9]
   });
 ```
 
-##### [mock-w-post]    Angular.js EE
+##### Angular.js EE: [mock-w-post]
 
 > HTTP POST - create
+
+**Description:** 
+
+<pre>mock-w-post                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 // create
@@ -815,9 +906,15 @@ ${1:\$httpBackend}.when('POST', regexpUrl(/${2:rest}\/${3:resource}\$/))
   });
 ```
 
-##### [mock-w-put]    Angular.js EE
+##### Angular.js EE: [mock-w-put]
 
 > HTTP PUT - update
+
+**Description:** 
+
+<pre>mock-w-put                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 // update
@@ -835,9 +932,15 @@ ${1:\$httpBackend}.when('PUT', regexpUrl(/${2:rest}\/${3:resource}(\/)?([A-z0-9]
   });
 ```
 
-##### [mock-w-delete]    Angular.js EE
+##### Angular.js EE: [mock-w-delete]
 
 > HTTP DELETE
+
+**Description:** 
+
+<pre>mock-w-delete                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 // delete
@@ -862,9 +965,15 @@ ${1:\$httpBackend}.when('DELETE', regexpUrl(/${2:rest}\/${3:resource}(\/)?([A-z0
   });
 ```
 
-##### [mock-w-search]    Angular.js EE
+##### Angular.js EE: [mock-w-search]
 
 > HTTP GET - search collection by value
+
+**Description:** 
+
+<pre>mock-w-search                  Angular.js EE</pre>
+
+**Content:**
 
 ```javascript
 // search
@@ -895,15 +1004,25 @@ ${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}\/${4:search}\
 
 ### Angular.js
 
-#### Services
+#### Angular.js: [angular]
 
-##### [angular]    Angular.js
+**Description:** 
+
+<pre>angular                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 angular
 ```
 
-##### [config]    Angular.js
+#### Angular.js: [config]
+
+**Description:** 
+
+<pre>config                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 config([${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}function ($1) {
@@ -911,13 +1030,25 @@ config([${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}function ($1) {
 }]);
 ```
 
-##### [constant]    Angular.js
+#### Angular.js: [constant]
+
+**Description:** 
+
+<pre>constant                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 constant('${1:name}', ${2:value});
 ```
 
-##### [controller]    Angular.js
+#### Angular.js: [controller]
+
+**Description:** 
+
+<pre>controller                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 controller(
@@ -934,7 +1065,13 @@ function (${2:\$scope}) {
 }]);
 ```
 
-##### [decorator]    Angular.js
+#### Angular.js: [decorator]
+
+**Description:** 
+
+<pre>decorator                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 decorator('${1:name}', [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}function (${2:\$provide}) {
@@ -944,7 +1081,13 @@ decorator('${1:name}', [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}functio
 }]);
 ```
 
-##### [directive]    Angular.js
+#### Angular.js: [directive]
+
+**Description:** 
+
+<pre>directive                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 directive(
@@ -966,7 +1109,13 @@ function ($2) {
 }]);
 ```
 
-##### [directiveLong]    Angular.js
+#### Angular.js: [directiveLong]
+
+**Description:** 
+
+<pre>directiveLong                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 directive(
@@ -1007,7 +1156,13 @@ ${14:    link: function postLink(scope, iElement, iAttrs) \{
 }]);
 ```
 
-##### [factory]    Angular.js
+#### Angular.js: [factory]
+
+**Description:** 
+
+<pre>factory                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 factory(
@@ -1028,7 +1183,13 @@ function ($2) {
 }]);
 ```
 
-##### [filter]    Angular.js
+#### Angular.js: [filter]
+
+**Description:** 
+
+<pre>filter                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 filter(
@@ -1050,7 +1211,13 @@ function() {
 });
 ```
 
-##### [module]    Angular.js
+#### Angular.js: [module]
+
+**Description:** 
+
+<pre>module                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 module(
@@ -1065,7 +1232,13 @@ module(
 );
 ```
 
-##### [provider]    Angular.js
+#### Angular.js: [provider]
+
+**Description:** 
+
+<pre>provider                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 provider(
@@ -1088,7 +1261,13 @@ function ($2) {
 }]);
 ```
 
-##### [resource-id]    Angular.js
+#### Angular.js: [resource-id]
+
+**Description:** 
+
+<pre>resource-id                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 factory(
@@ -1115,7 +1294,13 @@ function (${2:\$resource}) {
 }]);
 ```
 
-##### [resource]    Angular.js
+#### Angular.js: [resource]
+
+**Description:** 
+
+<pre>resource                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 factory(
@@ -1136,7 +1321,13 @@ function (${2:\$resource}) {
 }]);
 ```
 
-##### [routeProvider]    Angular.js
+#### Angular.js: [routeProvider]
+
+**Description:** 
+
+<pre>routeProvider                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 config(
@@ -1159,7 +1350,13 @@ function (\$routeProvider) {
 }]);
 ```
 
-##### [when]    Angular.js
+#### Angular.js: [when]
+
+**Description:** 
+
+<pre>when                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 when(
@@ -1171,13 +1368,25 @@ when(
 )$0
 ```
 
-##### [otherwise]    Angular.js
+#### Angular.js: [otherwise]
+
+**Description:** 
+
+<pre>otherwise                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 otherwise(${1:{ redirectTo: '/${2:route}' \}})
 ```
 
-##### [run]    Angular.js
+#### Angular.js: [run]
+
+**Description:** 
+
+<pre>run                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 run([${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}function ($1) {
@@ -1185,7 +1394,13 @@ run([${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}function ($1) {
 }]);
 ```
 
-##### [service]    Angular.js
+#### Angular.js: [service]
+
+**Description:** 
+
+<pre>service                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 service(
@@ -1202,7 +1417,13 @@ function ($2) {
 }]);
 ```
 
-##### [value]    Angular.js
+#### Angular.js: [value]
+
+**Description:** 
+
+<pre>value                  Angular.js</pre>
+
+**Content:**
 
 ```javascript
 value('${1:name}', ${2:value});
