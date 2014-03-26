@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[
+define(
+// require.js dependency injection
+[
+  'angular',
+  'angularRoute'${1:,
+  'angularResource'}
+],
+
+// require.js module scope
+function(${2:ng}) {
+  'use strict';
+
+  // module definition
+  return $2.module(
+    // module name
+    '${3:moduleName}',
+
+    // module dependencies
+    [
+      'ngRoute'${4:,
+      'ngResource'}$0
+    ]
+  );
+
+});
+]]></content>
+  <tabTrigger>module</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>

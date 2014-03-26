@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+define(
+// require.js dependency injection
+[
+  '$1./module'$2
+],
+
+// require.js module scope
+function(${3:module}) {
+  'use strict';
+
+  $3$0
+
+});
+]]></content>
+  <tabTrigger>module-use</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>
