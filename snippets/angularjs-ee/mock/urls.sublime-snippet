@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[
+define(
+// require.js dependency injection
+[
+  'angular',
+  'shared/mock/backend'${2:,
+
+  './data$1'}
+],
+
+// require.js module scope
+function(ng, backend) {
+  'use strict';
+
+
+  backend.addResource(
+
+    // mock resource dependencies injection
+    [
+      'Helpers',
+      '\$httpBackend', 'regexpUrl', 'getParams',
+      '\$log',$3
+
+  // mock resource definition
+  function(helpers, \$httpBackend, regexpUrl, getParams, console$4) {
+
+    //--- @begin: URL interceptor
+
+    $0
+
+    //--- @end: URL interceptor
+
+  }]);
+
+});
+]]></content>
+  <tabTrigger>mock-urls</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>

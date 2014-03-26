@@ -1,0 +1,161 @@
+<snippet>
+  <content><![CDATA[
+define(
+// require.js dependency injection
+[
+  'shared/mock/module'
+],
+
+// require.js module scope
+function(module) {
+  'use strict';
+
+
+  module.factory(
+
+    // factory name
+    '${1:Name}Collection',
+
+    // factory dependencies injection
+    ['DataStore', 'Helpers', '\$log',
+
+  // factory definition
+  function(DataStore, helpers, console) {
+
+    console.debug('$1Collection');
+
+    var Collection = (function() {
+
+      //--- private att
+
+      var seq = 0;
+      var collection = DataStore.addCollection(
+        // collection name
+        '${1/([A-Za-z0-9]+)?/(?2::\l$1)/g}',
+
+        // Object Type
+        '$1$2',
+
+        // indices array
+        [
+          'id',
+          'name'$3
+        ]
+      );
+
+      //--- @begin: private functions
+
+      function searchValue(find) {
+        if(!find) return [];
+
+        var r = [], obj,
+            regexp = new RegExp(find, 'i'),
+            data = collection.find(),
+            len = data.length;
+
+        for (var i = 0; i < len; i++) {
+          obj = data[i];
+
+          if(obj.name.match(regexp) || obj.description.match(regexp))
+            r.push(obj);
+        }
+
+        return r;
+      }
+
+      //--- @end: private functions
+
+
+      // class constructor
+      var $1Collection = function() {};
+      var ClassDef = $1Collection;
+      //---
+
+      //--- @begin: public functions
+
+      ClassDef.prototype.getById = function(id) {
+        var r = collection.find({'id': id});
+        if(r.length > 0) return r[0];
+        return null;
+      };
+
+      ClassDef.prototype.insert = function(object) {
+        if(helpers.isObject(object)) {
+          object.id = seq++;
+          return collection.insert(object);
+        }
+        return null;
+      };
+
+      ClassDef.prototype.update = function(object) {
+        if(helpers.isObject(object))
+          collection.update(object);
+      };
+
+      ClassDef.prototype.remove = function(object) {
+        if(helpers.isObject(object))
+          collection.remove(object);
+      };
+
+      ClassDef.prototype.list = function(options) {
+        options = options || {page: 1, size: 10};
+        return helpers.paginate(collection.find(), options);
+      };
+
+      ClassDef.prototype.search = function(find, options) {
+        options = options || {page: 1, size: 10};
+        return helpers.paginate(searchValue(find), options);
+      };
+
+      //--- @end: public functions
+
+      //--- @begin: init collection
+      (function() {
+
+        function createObject(_id, _name, _description$4) {
+          return {
+            id: _id,
+            name: _name,
+            description: _description$5
+          };
+        }
+
+${9:        // manual fake data definition}
+${0:        collection.insert(
+          createObject(
+            seq++,
+            'Manual Person ' + (seq+1),
+            'Manual Person ' + (seq+1) + 'Description'$6
+          )
+        );}
+
+        for (var i = ${8:59}; i >= 0; i--) {
+          collection.insert(
+            createObject(
+              seq++,
+              'fake person ' + (seq+1),
+              'some description to fake person ' + (seq+1)$7
+            )
+          );
+        }
+
+      })();
+      //--- @end: init collection
+
+      // return class definition
+      return ClassDef;
+    })();
+
+    //---
+
+    return new Collection();
+
+  }]);
+
+
+});
+]]></content>
+  <tabTrigger>mock-data</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>

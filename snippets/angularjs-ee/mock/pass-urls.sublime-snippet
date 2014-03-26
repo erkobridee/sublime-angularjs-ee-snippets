@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[
+define(
+// require.js dependency injection
+[
+  'shared/mock/backend'
+],
+
+// require.js module scope
+function(backend) {
+  'use strict';
+
+
+  backend.addResource(
+
+    // mock resource dependencies injection
+    [
+      ${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}
+
+  // mock resource definition
+  function(${1:\$httpBackend, regexpUrl}) {
+
+${2:    // Allow GET users from GitHub API}
+    ${4:\$httpBackend
+      .when('GET', regexpUrl(/${3:api\.github\.com\/users}(\/)?([A-z0-9]+)?\$/))
+      .passThrough();}$0
+
+  }]);
+
+
+});
+]]></content>
+  <tabTrigger>mock-pass-urls</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>

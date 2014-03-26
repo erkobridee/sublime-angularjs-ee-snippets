@@ -1,0 +1,65 @@
+<snippet>
+  <content><![CDATA[
+define(
+// require.js dependency injection
+[
+  'shared/mock/backend'
+],
+
+// require.js module scope
+function(backend) {
+  'use strict';
+
+
+  backend.addResource(
+
+    // mock resource dependencies injection
+    [
+      ${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}
+
+  // mock resource definition
+  function(${1:\$httpBackend, regexpUrl}) {
+
+    //--- @begin: Allow pass to server
+
+    // get all
+    \$httpBackend
+      .when('GET', regexpUrl(/${2:rest}\/${3:resource}(\?|\$)/))
+      .passThrough();
+
+    // get one
+    \$httpBackend
+      .when('GET', regexpUrl(/$2\/$3(\/)?([A-z0-9]+)?\$/))
+      .passThrough();
+
+    // create
+    \$httpBackend
+      .when('POST', regexpUrl(/$2\/$3\$/))
+      .passThrough();
+
+    // update
+    \$httpBackend
+      .when('PUT', regexpUrl(/$2\/$3(\/)?([A-z0-9]+)?\$/))
+      .passThrough();
+
+    // delete
+    \$httpBackend
+      .when('DELETE', regexpUrl(/$2\/$3(\/)?([A-z0-9]+)?\$/))
+      .passThrough();
+
+${4:    // search
+    \$httpBackend
+      .when('GET', regexpUrl(/$2\/$3\/search\/([A-z0-9]+)(\?|\$)/))
+      .passThrough();}
+
+    //--- @end: Allow pass to server
+
+  }]);
+
+
+});
+]]></content>
+  <tabTrigger>mock-pass-backend</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>
