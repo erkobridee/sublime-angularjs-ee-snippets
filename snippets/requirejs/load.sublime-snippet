@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+define(
+// require.js dependency injection
+[
+  $0
+],
+
+// require.js module scope
+function() {});
+]]></content>
+  <tabTrigger>load</tabTrigger>
+  <scope>source.js</scope>
+  <description>Require.js</description>
+</snippet>
