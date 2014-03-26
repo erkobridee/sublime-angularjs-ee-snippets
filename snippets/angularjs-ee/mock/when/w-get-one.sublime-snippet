@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[
+// get one
+${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}(\/)?([A-z0-9]+)?\$/))
+  .respond(function(method, url, data) {
+    console.debug('GET ' + url);
+
+    var result,
+        regexp = /$2\//,
+        id = helpers.getIdFromURL(url, regexp),
+        object = ${4:collection.getById(id);}$0
+
+    if(object) {
+      result = [200, angular.copy(object)];
+    } else {
+      result = [404, helpers.notFound(id)];
+    }
+
+    return result;
+  });
+]]></content>
+  <tabTrigger>mock-w-one</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>

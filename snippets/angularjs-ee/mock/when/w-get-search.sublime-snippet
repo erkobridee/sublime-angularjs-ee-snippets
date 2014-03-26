@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[
+// search
+${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}\/${4:search}\/([A-z0-9]+)(\?|\$)/))
+  .respond(function(method, url, data) {
+    console.debug('GET ' + url);
+
+    var result,
+        regexp = /$3\/$4\//,
+        find = helpers.getValueFromURL(url, regexp),
+        params = getParams(url)${6:,
+        options = {page: 1, size: 10\};
+
+    if(params) {
+      console.debug(params);
+      options.page = params.page;
+      options.size = params.size;
+    \}}$0
+
+    console.debug(find);
+
+    result = ${5:collection.search(find, options);}
+
+    return [200, angular.copy(result)];
+  \});
+]]></content>
+  <tabTrigger>mock-w-search</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>

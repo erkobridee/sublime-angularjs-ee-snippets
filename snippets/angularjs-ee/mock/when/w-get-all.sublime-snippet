@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[
+// get all
+${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}(\?|\$)/))
+  .respond(function(method, url, data) {
+
+    console.debug('GET ' + url);
+
+    var result,
+        params = getParams(url)${4:,
+        options = {page: 1, size: 10\};
+
+    if(params) {
+      console.debug(params);
+      options.page = params.page;
+      options.size = params.size;
+    \}}$0
+
+    result = ${5:collection.list(options);}
+
+    return [200, angular.copy(result)];
+  });
+]]></content>
+  <tabTrigger>mock-w-all</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>

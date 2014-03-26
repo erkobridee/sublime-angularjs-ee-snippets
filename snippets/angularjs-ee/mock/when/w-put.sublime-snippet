@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+// update
+${1:\$httpBackend}.when('PUT', regexpUrl(/${2:rest}\/${3:resource}(\/)?([A-z0-9]+)?\$/))
+  .respond(function(method, url, data) {
+    console.log('PUT ' + url);
+
+    data = angular.fromJson(data);
+
+    ${4:collection.update(data);}$0
+
+    console.debug(data);
+
+    return [202, angular.copy(data)];
+  });
+]]></content>
+  <tabTrigger>mock-w-put</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>

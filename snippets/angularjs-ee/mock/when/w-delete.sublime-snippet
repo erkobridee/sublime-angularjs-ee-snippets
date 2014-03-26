@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[
+// delete
+${1:\$httpBackend}.when('DELETE', regexpUrl(/${2:rest}\/${3:resource}(\/)?([A-z0-9]+)?\$/))
+  .respond(function(method, url, data) {
+    console.debug('DELETE ' + url);
+
+    var result,
+        regexp = /$2\//,
+        id = helpers.getIdFromURL(url, regexp),
+        object = ${5:collection.getById(id);}$0
+
+    if(object) {
+      ${6:collection.remove(object);}
+      result = [202, helpers.createResultMessage(202, '$3$4 id: ' + id + ' removed')];
+    } else {
+      result = [404, helpers.notFound(id)];
+    }
+
+    return result;
+
+  });
+]]></content>
+  <tabTrigger>mock-w-delete</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>

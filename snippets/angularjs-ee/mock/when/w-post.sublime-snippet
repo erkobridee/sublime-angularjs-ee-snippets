@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[
+// create
+${1:\$httpBackend}.when('POST', regexpUrl(/${2:rest}\/${3:resource}\$/))
+  .respond(function(method, url, data) {
+    console.debug('POST ' + url);
+
+    data = angular.fromJson(data);
+    data = ${4:collection.insert(data);}$0
+
+    console.debug(data);
+
+    return [201, angular.copy(data)];
+  });
+]]></content>
+  <tabTrigger>mock-w-post</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js EE</description>
+</snippet>
