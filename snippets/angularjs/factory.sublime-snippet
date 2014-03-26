@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[
+factory(
+  // factory name
+  '${1:name}',
+
+  // dependencies injection
+  [
+    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+
+// factory definition
+function ($2) {
+  $0
+
+  return {
+    $3
+  };
+}]);
+]]></content>
+  <tabTrigger>factory</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js</description>
+</snippet>

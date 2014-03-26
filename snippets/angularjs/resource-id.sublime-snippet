@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[
+factory(
+  // resource name
+  '${1:Name}Resource',
+
+  // dependencies injection
+  [
+    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+
+// resource definition
+function (${2:\$resource}) {
+
+  return \$resource(
+    '${3:url}/:id',
+    {
+      'id': ''$0
+    },
+    {
+      'update': { 'method': 'PUT' }
+    }
+  );
+
+}]);
+]]></content>
+  <tabTrigger>resource-id</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js</description>
+</snippet>

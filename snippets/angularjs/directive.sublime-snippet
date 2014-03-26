@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[
+directive(
+  // component name
+  '${1:name}',
+
+  // dependencies injection
+  [
+    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+
+// component definition
+function ($2) {
+  return {
+    restrict: '${3:A}',
+    link: function (scope, iElement, iAttrs) {
+      $0
+    }
+  };
+}]);
+]]></content>
+  <tabTrigger>directive</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js</description>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[
+filter(
+  // filter name
+  '${1:name}',
+
+// filter definition
+function() {
+
+  return function(input, ${2:configValue}) {
+    input = input || '';
+    var out = '';
+
+    ${0://TODO: define filter process code}
+
+    return out;
+  };
+
+});
+]]></content>
+  <tabTrigger>filter</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js</description>
+</snippet>

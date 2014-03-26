@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[
+controller(
+  // controller name
+  '${1:Name}Ctrl',
+
+  // dependencies injection
+  [
+    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+
+// controller definition
+function (${2:\$scope}) {
+  $0
+}]);
+]]></content>
+  <tabTrigger>controller</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js</description>
+</snippet>

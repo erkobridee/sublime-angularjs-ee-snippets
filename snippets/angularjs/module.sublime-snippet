@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+module(
+  // module name
+  '${1:moduleName}',
+
+  // module dependencies
+  [
+    // 'dependencyModuleName',
+    $2
+  ]
+);
+]]></content>
+  <tabTrigger>module</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular.js</description>
+</snippet>
