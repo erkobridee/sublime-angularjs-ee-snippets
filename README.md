@@ -5,7 +5,7 @@
 * [Installation Options](#installation-options)
 * [Snippets](#snippets)
   * [Require.js](#requirejs)
-    * [[config]    Require.js](#config-requirejs)
+    * [[config]](#config)
     * [[define]    Require.js](#define-requirejs)
     * [[load]    Require.js](#load-requirejs)
   * [Angular.js EE (Enterprise Edition)](#angularjs-ee-enterprise-edition)
@@ -94,14 +94,14 @@ $ git clone https://github.com/erkobridee/sublime-angularjs-ee-snippets.git
 
 Below is a list of all triggers and respectives snippets currently supported on this package.
 
-> **trigger:** *triggerName* `TAB` key.
+> **trigger:** [*triggerName*] `TAB` key.
 
 
 ### Require.js
 
-#### config
+#### [config]
 
-**Description:** config&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Require.js
+**Description:** <pre>config		Require.js</pre>
 
 **Content:**
 
