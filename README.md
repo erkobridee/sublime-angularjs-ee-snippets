@@ -101,7 +101,7 @@ Below is a list of all triggers and respectives snippets currently supported on 
 
 #### config
 
-**Description:** `config&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Require.js`
+**Description:** config&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Require.js
 
 **Content:**
 
