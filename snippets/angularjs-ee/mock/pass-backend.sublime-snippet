@@ -47,9 +47,9 @@ function(backend) {
       .when('DELETE', regexpUrl(/$2\/$3(\/)?([A-z0-9]+)?\$/))
       .passThrough();
 
-${4:    // search
+${5:    // search
     \$httpBackend
-      .when('GET', regexpUrl(/$2\/$3\/search\/([A-z0-9]+)(\?|\$)/))
+      .when('GET', regexpUrl(/$2\/$3\/${4:search}\/([A-z0-9]+)(\?|\$)/))
       .passThrough();}
 
     //--- @end: Allow pass to server
