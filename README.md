@@ -1026,7 +1026,9 @@ angular
 
 ```javascript
 config([${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}function ($1) {
+
   $0
+
 }]);
 ```
 
@@ -1061,7 +1063,9 @@ controller(
 
 // controller definition
 function (${2:\$scope}) {
+
   $0
+
 }]);
 ```
 
@@ -1103,7 +1107,9 @@ function ($2) {
   return {
     restrict: '${3:A}',
     link: function (scope, iElement, iAttrs) {
+
       $0
+
     }
   };
 }]);
@@ -1131,25 +1137,25 @@ function ($2) {
   return {$0
 ${3:    priority: 0,}
 ${4:    template: '<div></div>',}
-${5:    templateUrl: 'directive.html',}
-${6:    replace: true,}
-${7:    transclude: true,}
-${8:    restrict: 'A',}
-${9:    scope: \{$10\},}
-${11:    controller: [
+${6:    templateUrl: '${5:directive}.html',}
+${7:    replace: true,}
+${8:    transclude: true,}
+${10:    restrict: 'A$9',}
+${12:    scope: \{$11\},}
+${14:    controller: [
       // dependencies injection
-      ${12/(?:.+)/'/g}${12/,[ ]*/', '/g}${12/(?:.+)/', /g}
+      ${13/(?:.+)/'/g}${13/,[ ]*/', '/g}${13/(?:.+)/', /g}
 
     // controller definition
-    function(${12:\$scope, \$element, \$attrs, \$transclude}) \{
+    function(${13:\$scope, \$element, \$attrs, \$transclude}) \{
 
     \}],}
-${13:    compile: function compile(tElement, tAttrs, transclude) \{
+${15:    compile: function compile(tElement, tAttrs, transclude) \{
       return function postLink(scope, iElement, iAttrs, controller) \{
 
       \}
     \},}
-${14:    link: function postLink(scope, iElement, iAttrs) \{
+${16:    link: function postLink(scope, iElement, iAttrs) \{
 
     \}}
   };
@@ -1175,6 +1181,7 @@ factory(
 
 // factory definition
 function ($2) {
+
   $0
 
   return {
@@ -1390,7 +1397,9 @@ otherwise(${1:{ redirectTo: '/${2:route}' \}})
 
 ```javascript
 run([${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}function ($1) {
+
   $0
+
 }]);
 ```
 
@@ -1413,7 +1422,9 @@ service(
 
 // service definition
 function ($2) {
+
   $0
+
 }]);
 ```
 
