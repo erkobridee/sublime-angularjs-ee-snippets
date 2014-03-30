@@ -10,7 +10,9 @@ service(
 
 // service definition
 function ($2) {
+
   $0
+
 }]);
 ]]></content>
   <tabTrigger>service</tabTrigger>

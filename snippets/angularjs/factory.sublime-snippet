@@ -10,6 +10,7 @@ factory(
 
 // factory definition
 function ($2) {
+
   $0
 
   return {

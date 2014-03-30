@@ -10,7 +10,9 @@ controller(
 
 // controller definition
 function (${2:\$scope}) {
+
   $0
+
 }]);
 ]]></content>
   <tabTrigger>controller</tabTrigger>
