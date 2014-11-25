@@ -1,26 +1,28 @@
 <snippet>
   <content><![CDATA[
-define(
-// require.js dependency injection
-[
-  'angular',
-  'angularRoute'${1:,
-  'angularResource'}
-],
-
-// require.js module scope
-function(${2:ng}) {
+define(function(require) {
   'use strict';
 
-  // module definition
-  return $2.module(
-    // module name
-    '${3:moduleName}',
+  var angular = require('angular');
+${2:  require('angularResource');
+}
+${4:  require('uiRouter');}
+${6:  require('uiBootstrap');}
 
+  // angular module definition
+  return angular.module(
+    // module name
+    '${1:moduleName}',
+  
     // module dependencies
     [
-      'ngRoute'${4:,
-      'ngResource'}$0
+${3:      'ngResource',
+}
+${5:      'ui.router',}
+${7:      'ui.bootstrap',
+}
+${8:      require('shared/fend/input-utils/package').name,
+      require('shared/fend/pagination/package').name}
     ]
   );
 
