@@ -1,11 +1,13 @@
 # Angular.js EE Snippets for Sublime Text 2/3
 
 <!-- toc -->
+
 * [Overview](#overview)
 * [How to install](#how-to-install)
 * [Snippets](#snippets)
   * [Require.js](#requirejs)
     * [Require.js: [config]](#requirejs-config)
+    * [Require.js: [require]](#requirejs-require)
     * [Require.js: [define]](#requirejs-define)
     * [Require.js: [load]](#requirejs-load)
   * [Angular.js EE (Enterprise Edition)](#angularjs-ee-enterprise-edition)
@@ -19,12 +21,6 @@
     * [Angular.js EE: [mock-data]](#angularjs-ee-mock-data)
     * [Angular.js EE: [mock-backend]](#angularjs-ee-mock-backend)
     * [Angular.js EE: [mock-urls]](#angularjs-ee-mock-urls)
-      * [Angular.js EE: [mock-w-all]](#angularjs-ee-mock-w-all)
-      * [Angular.js EE: [mock-w-one]](#angularjs-ee-mock-w-one)
-      * [Angular.js EE: [mock-w-post]](#angularjs-ee-mock-w-post)
-      * [Angular.js EE: [mock-w-put]](#angularjs-ee-mock-w-put)
-      * [Angular.js EE: [mock-w-delete]](#angularjs-ee-mock-w-delete)
-      * [Angular.js EE: [mock-w-search]](#angularjs-ee-mock-w-search)
   * [Angular.js](#angularjs)
     * [Angular.js: [angular]](#angularjs-angular)
     * [Angular.js: [config]](#angularjs-config)
@@ -134,6 +130,19 @@ require({
 });
 ```
 
+#### Require.js: [require]
+
+**Description:** 
+
+<pre>require                  Require.js</pre>
+
+**Content:**
+
+```javascript
+require('${1:path/file_js}');$2
+$0
+```
+
 #### Require.js: [define]
 
 **Description:** 
@@ -165,9 +174,7 @@ define(function(require) {
 define(function(require) {
   'use strict';
 
-  ${1:require('path/file_js');}
-
-  ${0:return null;}
+  $0
 
 });
 ```
