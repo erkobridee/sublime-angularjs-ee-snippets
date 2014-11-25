@@ -977,20 +977,27 @@ constant('${1:name}', ${2:value});
 **Content:**
 
 ```javascript
-controller(
-  // controller name
-  '${1:Name}Ctrl',
+controller('${1:Name}Ctrl', $1Ctrl);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// controller definition
-function (${2:\$scope}) {
+/*
+  Angular.js Style Guide Y030
+  https://github.com/johnpapa/angularjs-styleguide#style-y030
+*/
 
-  $0
+$1Ctrl.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
-}]);
+function $1Ctrl($2) {
+  var vm = this;
+
+  ${4:// TODO: define vm (ViewModel) attribures}
+
+  //---
+
+  ${5:// TODO: define internal processing code}
+
+}
 ```
 
 #### Angular.js: [decorator]
