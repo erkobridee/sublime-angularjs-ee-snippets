@@ -1089,8 +1089,6 @@ function $1() {
 
 **Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y070](https://github.com/johnpapa/angularjs-styleguide#style-y070) [Y072](https://github.com/johnpapa/angularjs-styleguide#style-y072) [Y073](https://github.com/johnpapa/angularjs-styleguide#style-y073) [Y074](https://github.com/johnpapa/angularjs-styleguide#style-y074) [Y075](https://github.com/johnpapa/angularjs-styleguide#style-y075) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
-$inject >> [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
-
 **Content:**
 
 ```javascript
