@@ -253,6 +253,8 @@ ${1:  require('./resource');}
 
 <pre>module                  Angular.js EE</pre>
 
+**Angular.js Style Guide:** [Y020](https://github.com/johnpapa/angularjs-styleguide#style-y020) [Y021](https://github.com/johnpapa/angularjs-styleguide#style-y021) 
+
 **Content:**
 
 ```javascript
@@ -333,6 +335,8 @@ define(function(require) {
 
 <pre>mock-pass-urls                  Angular.js EE</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091) 
+
 **Content:**
 
 ```javascript
@@ -366,6 +370,8 @@ ${2:    // Allow GET users from GitHub API}
 **Description:** 
 
 <pre>mock-pass-backend                  Angular.js EE</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
 **Content:**
 
@@ -429,6 +435,8 @@ ${5:    // search
 **Description:** 
 
 <pre>mock-data                  Angular.js EE</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
 **Content:**
 
@@ -542,6 +550,8 @@ ${5:          // manual fake data definition}
 **Description:** 
 
 <pre>mock-backend                  Angular.js EE</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
 **Content:**
 
@@ -699,6 +709,8 @@ ${9:    console.debug('$2 Mock URL Interceptors');
 **Description:** 
 
 <pre>mock-urls                  Angular.js EE</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
 **Content:**
 
@@ -940,6 +952,8 @@ angular
 
 <pre>config                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
 **Content:**
 
 ```javascript
@@ -974,7 +988,7 @@ constant('${1:name}', ${2:value});
 
 <pre>controller                  Angular.js</pre>
 
-**Angular.js Style Guide:** [Y030](https://github.com/johnpapa/angularjs-styleguide#style-y030)
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y030](https://github.com/johnpapa/angularjs-styleguide#style-y030) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
 **Content:**
 
@@ -1003,7 +1017,7 @@ function $1Ctrl($2) {
 
 <pre>decorator                  Angular.js</pre>
 
-**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024)
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
 **Content:**
 
@@ -1044,6 +1058,8 @@ directive('${1:name}', $1);
 
 //---
 
+// https://code.angularjs.org/1.3.3/docs/guide/directive
+
 function $1() {
   var directive = {
     restrict: '${2:EA}',
@@ -1069,45 +1085,58 @@ function $1() {
 
 <pre>directiveLong                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y070](https://github.com/johnpapa/angularjs-styleguide#style-y070) [Y072](https://github.com/johnpapa/angularjs-styleguide#style-y072) [Y073](https://github.com/johnpapa/angularjs-styleguide#style-y073) [Y074](https://github.com/johnpapa/angularjs-styleguide#style-y074) [Y075](https://github.com/johnpapa/angularjs-styleguide#style-y075) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
+$inject >> [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
 **Content:**
 
 ```javascript
-directive(
-  // component name
-  '${1:name}',
+directive('${1:name}', $1);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// component definition
-function ($2) {
-  return {$0
-${3:    priority: 0,}
-${4:    template: '<div></div>',}
-${6:    templateUrl: '${5:directive}.html',}
-${7:    replace: true,}
-${8:    transclude: true,}
-${10:    restrict: 'A$9',}
-${12:    scope: \{$11\},}
-${14:    controller: [
-      // dependencies injection
-      ${13/(?:.+)/'/g}${13/,[ ]*/', '/g}${13/(?:.+)/', /g}
+// https://code.angularjs.org/1.3.3/docs/guide/directive
 
-    // controller definition
-    function(${13:\$scope, \$element, \$attrs, \$transclude}) \{
-
-    \}],}
-${15:    compile: function compile(tElement, tAttrs, transclude) \{
-      return function postLink(scope, iElement, iAttrs, controller) \{
-
-      \}
-    \},}
-${16:    link: function postLink(scope, iElement, iAttrs) \{
-
-    \}}
+function $1() {
+  var directive = {
+    restrict: 'EA$3',
+    template: '<div>min: {{vm.min}} :: max: {{vm.max}}</div>',$4
+    templateUrl: '${5:path/directive/template}.html',$6
+    scope: {
+      max: '='
+    },
+    link: ${7:linkFunc},
+    controller: $2,
+    controllerAs: 'vm'
   };
-}]);
+
+  return directive;
+
+  //---
+
+  function $7(scope, el, attr, ctrl) {
+    console.log('LINK: scope.max = %i', scope.max);
+    console.log('LINK: scope.vm.min = %i', scope.vm.min);
+    console.log('LINK: scope.vm.max = %i', scope.vm.max);
+  }
+
+}
+
+//---
+
+$2.\$inject = [${7/(?:.+)/'/g}${8/,[ ]*/', '/g}${8/(?:.+)/',/g} $9];
+
+function ${2:${1/([A-Za-z0-9]+)?/(?2::\u$1)/g}Controller}(${8:\$scope}) {
+  // Injecting $scope just for comparison
+  var vm = this;$0
+
+  vm.min = 3; 
+  vm.max = \$scope.max; 
+  console.log('CTRL: $scope.max = %i', \$scope.max);
+  console.log('CTRL: vm.min = %i', vm.min);
+  console.log('CTRL: vm.max = %i', vm.max);
+}
 ```
 
 #### Angular.js: [factory]
