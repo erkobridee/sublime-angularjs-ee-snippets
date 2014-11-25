@@ -1145,26 +1145,35 @@ function ${2:${1/([A-Za-z0-9]+)?/(?2::\u$1)/g}Controller}(${8:\$scope}) {
 
 <pre>factory                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y050](https://github.com/johnpapa/angularjs-styleguide#style-y050) [Y051](https://github.com/johnpapa/angularjs-styleguide#style-y051) [Y052](https://github.com/johnpapa/angularjs-styleguide#style-y052) [Y053](https://github.com/johnpapa/angularjs-styleguide#style-y053)[Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
 **Content:**
 
 ```javascript
-factory(
-  // factory name
-  '${1:name}',
+factory('${1:Name}', $1);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// factory definition
-function ($2) {
+$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
-  $0
+function $1($2) {
 
-  return {
-    $3
+  var service = {
+    attr: 'value',$0
+    func: hiddenFunction
   };
-}]);
+
+  return service;
+
+  //---
+
+  function hiddenFunction() {
+    
+    // TODO: define
+
+  }
+
+}
 ```
 
 #### Angular.js: [filter]

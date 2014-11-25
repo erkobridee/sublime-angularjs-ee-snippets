@@ -1,22 +1,29 @@
 <snippet>
   <content><![CDATA[
-factory(
-  // factory name
-  '${1:name}',
+factory('${1:Name}', $1);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// factory definition
-function ($2) {
+$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
-  $0
+function $1($2) {
 
-  return {
-    $3
+  var service = {
+    attr: 'value',$0
+    func: hiddenFunction
   };
-}]);
+
+  return service;
+
+  //---
+
+  function hiddenFunction() {
+    
+    // TODO: define
+
+  }
+
+}
 ]]></content>
   <tabTrigger>factory</tabTrigger>
   <scope>source.js</scope>
