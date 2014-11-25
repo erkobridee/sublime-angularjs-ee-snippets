@@ -1191,6 +1191,8 @@ filter('${1:name}', $1);
 
 //---
 
+// https://code.angularjs.org/1.3.3/docs/guide/filter
+
 function $1() {
 
   return function(input, ${2:configValue}) {
