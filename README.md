@@ -294,17 +294,12 @@ ${8:      require('shared/fend/input-utils/package').name,
 **Content:**
 
 ```javascript
-define(
-// require.js dependency injection
-[
-  '$1./module'$2
-],
-
-// require.js module scope
-function(${3:module}) {
+define(function(require) {
   'use strict';
 
-  $3$0
+  var module = require('$1./module');
+
+  $0
 
 });
 ```
