@@ -12,7 +12,7 @@
     * [Require.js: [load]](#requirejs-load)
   * [Angular.js EE (Enterprise Edition)](#angularjs-ee-enterprise-edition)
     * [Angular.js EE: [bootstrap]](#angularjs-ee-bootstrap)
-    * [Angular.js EE: [load]](#angularjs-ee-load)
+    * [Angular.js EE: [package]](#angularjs-ee-package)
     * [Angular.js EE: [module]](#angularjs-ee-module)
     * [Angular.js EE: [module-use]](#angularjs-ee-module-use)
     * [Angular.js EE: [mock-load]](#angularjs-ee-mock-load)
@@ -227,26 +227,26 @@ function(ng) {
 });
 ```
 
-#### Angular.js EE: [load]
+#### Angular.js EE: [package]
 
 **Description:** 
 
-<pre>load                  Angular.js EE</pre>
+<pre>package                  Angular.js EE</pre>
 
 **Content:**
 
 ```javascript
-define(
-// require.js dependency injection
-[
-  './module',
-${1:  './resource',}
-  './controller',
-  './routes'$0
-],
+define(function(require) {
+  'use strict';
 
-// require.js module scope
-function() {});
+  var module = require('./module');
+${1:  require('./resource');}
+  require('./controller');
+  require('./routes');$2
+
+  return module;$0
+
+});
 ```
 
 #### Angular.js EE: [module]
