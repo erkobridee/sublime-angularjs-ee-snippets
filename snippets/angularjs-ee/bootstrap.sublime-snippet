@@ -1,38 +1,36 @@
 <snippet>
   <content><![CDATA[
-define(
-// require.js dependency injection
-[
-  'angular',
-
-  $1'./require.mock.load',
-
-  '$3app/main/require.load'
-],
-
-// require.js module scope
-function(ng) {
+define(function(require) {
   'use strict';
 
-  ng.element(document).ready(function() {
+  var angular = require('angular');
 
-    // define run module to bootstrap application
-    ng.module(
+  angular.element(document).ready(startAngularApp);
+
+  //---
+
+  function startAngularApp() {
+${1:
+    console.log('start angular application');
+}
+    // define angular module to bootstrap application
+    var module = angular.module(
       // module name
-      '${0:run}',
+      '${4:run}',
 
       // module dependencies
       [
-        $2'ngMockBackend',
+${2:        // enable mock and intercep $HTTP requests
+        require('./require.mock.load').name,
 
-        '${4:main}'
+}${3:        require('app/main/package').name}
       ]
     );
 
     // start angular app
-    ng.bootstrap(document, ['$0']);
+    angular.bootstrap(document, [module.name]);
 
-  });
+  }$0
 
 });
 ]]></content>
