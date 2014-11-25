@@ -943,11 +943,17 @@ angular
 **Content:**
 
 ```javascript
-config([${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}function ($1) {
+config(${3:configure});
 
-  $0
+//---
 
-}]);
+$3.\$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/',/g} ${2}];
+
+function $3($1) {
+
+  ${0:// TODO: define code}
+
+}
 ```
 
 #### Angular.js: [constant]
