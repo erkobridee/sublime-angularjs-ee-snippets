@@ -370,25 +370,18 @@ ${2:    // Allow GET users from GitHub API}
 **Content:**
 
 ```javascript
-define(
-// require.js dependency injection
-[
-  'shared/mock/backend'
-],
-
-// require.js module scope
-function(backend) {
+define(function(require) {
   'use strict';
 
+  var backend = require('shared/mock/backend');
 
-  backend.addResource(
+  backend.addResource(AllowPass);
 
-    // mock resource dependencies injection
-    [
-      ${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}
+  //---
 
-  // mock resource definition
-  function(${1:\$httpBackend, regexpUrl}) {
+  AllowPass.$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}$6];
+
+  function AllowPass(${1:\$httpBackend, regexpUrl}) {
 
     //--- @begin: Allow pass to server
 
@@ -424,8 +417,7 @@ ${5:    // search
 
     //--- @end: Allow pass to server
 
-  }]);
-
+  }
 
 });
 ```
