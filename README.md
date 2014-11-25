@@ -1145,7 +1145,7 @@ function ${2:${1/([A-Za-z0-9]+)?/(?2::\u$1)/g}Controller}(${8:\$scope}) {
 
 <pre>factory                  Angular.js</pre>
 
-**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y050](https://github.com/johnpapa/angularjs-styleguide#style-y050) [Y051](https://github.com/johnpapa/angularjs-styleguide#style-y051) [Y052](https://github.com/johnpapa/angularjs-styleguide#style-y052) [Y053](https://github.com/johnpapa/angularjs-styleguide#style-y053)[Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y050](https://github.com/johnpapa/angularjs-styleguide#style-y050) [Y051](https://github.com/johnpapa/angularjs-styleguide#style-y051) [Y052](https://github.com/johnpapa/angularjs-styleguide#style-y052) [Y053](https://github.com/johnpapa/angularjs-styleguide#style-y053) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
 **Content:**
 
@@ -1236,27 +1236,28 @@ module(
 
 <pre>provider                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
 **Content:**
 
 ```javascript
-provider(
-  // provider name
-  '${1:name}',
+provider('${1:name}', $1);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// provider definition
-function ($2) {
-  $0
+$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
-  this.\$get = [${3/(?:.+)/'/g}${3/,[ ]*/', '/g}${3/(?:.+)/', /g}function($3) {
-    return {
+function $1($2) {
+  this.\$get = $4;
+}
 
-    };
-  }];
-}]);
+$4.\$inject = [${5/(?:.+)/'/g}${5/,[ ]*/', '/g}${5/(?:.+)/',/g} $6];
+
+function ${4:$1Get}($5) {
+  return {
+    $0
+  };
+}
 ```
 
 #### Angular.js: [resource-id]

@@ -1,23 +1,22 @@
 <snippet>
   <content><![CDATA[
-provider(
-  // provider name
-  '${1:name}',
+provider('${1:name}', $1);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// provider definition
-function ($2) {
-  $0
+$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
-  this.\$get = [${3/(?:.+)/'/g}${3/,[ ]*/', '/g}${3/(?:.+)/', /g}function($3) {
-    return {
+function $1($2) {
+  this.\$get = $4;
+}
 
-    };
-  }];
-}]);
+$4.\$inject = [${5/(?:.+)/'/g}${5/,[ ]*/', '/g}${5/(?:.+)/',/g} $6];
+
+function ${4:$1Get}($5) {
+  return {
+    $0
+  };
+}
 ]]></content>
   <tabTrigger>provider</tabTrigger>
   <scope>source.js</scope>
