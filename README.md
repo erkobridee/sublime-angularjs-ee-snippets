@@ -162,14 +162,14 @@ define(function(require) {
 **Content:**
 
 ```javascript
-define(
-// require.js dependency injection
-[
-  $0
-],
+define(function(require) {
+  'use strict';
 
-// require.js module scope
-function() {});
+  ${1:require('path/file_js');}
+
+  ${0:return null;}
+
+});
 ```
 
 
