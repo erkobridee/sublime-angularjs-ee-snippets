@@ -336,33 +336,27 @@ define(function(require) {
 **Content:**
 
 ```javascript
-define(
-// require.js dependency injection
-[
-  'shared/mock/backend'
-],
-
-// require.js module scope
-function(backend) {
+define(function(require) {
   'use strict';
 
+  var backend = require('shared/mock/backend');
 
-  backend.addResource(
+  backend.addResource(AllowPass);
 
-    // mock resource dependencies injection
-    [
-      ${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}
+  //---
+
+  // mock resource dependencies injection
+  AllowPass.$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}$5];
 
   // mock resource definition
-  function(${1:\$httpBackend, regexpUrl}) {
+  function AllowPass(${1:\$httpBackend, regexpUrl}) {
 
 ${2:    // Allow GET users from GitHub API}
     ${4:\$httpBackend
       .when('GET', regexpUrl(/${3:api\.github\.com\/users}(\/)?([A-z0-9]+)?\$/))
       .passThrough();}$0
 
-  }]);
-
+  }
 
 });
 ```
