@@ -15,7 +15,7 @@
     * [Angular.js EE: [package]](#angularjs-ee-package)
     * [Angular.js EE: [module]](#angularjs-ee-module)
     * [Angular.js EE: [module-use]](#angularjs-ee-module-use)
-    * [Angular.js EE: [mock-load]](#angularjs-ee-mock-load)
+    * [Angular.js EE: [mock-package]](#angularjs-ee-mock-package)
     * [Angular.js EE: [mock-pass-urls]](#angularjs-ee-mock-pass-urls)
     * [Angular.js EE: [mock-pass-backend]](#angularjs-ee-mock-pass-backend)
     * [Angular.js EE: [mock-data]](#angularjs-ee-mock-data)
@@ -304,28 +304,27 @@ define(function(require) {
 });
 ```
 
-#### Angular.js EE: [mock-load]
+#### Angular.js EE: [mock-package]
 
 **Description:** 
 
-<pre>mock-load                  Angular.js EE</pre>
+<pre>mock-package                  Angular.js EE</pre>
 
 **Content:**
 
 ```javascript
-define(
-// require.js dependency injection
-[
-  //$1'./allow-pass'
+define(function(require) {
+  'use strict';
+
+  // allow request pass through angular.js mock url interceptor
+  //$1 require('./allow-pass');
 
   /**/$2
-  './data',
-  './url-interceptors'
+  require('./data'); // local mock data
+  require('./url-interceptors'); // intercepts and responds
   /*$3*/
-],
 
-// require.js module scope
-function() {});
+});
 ```
 
 #### Angular.js EE: [mock-pass-urls]
