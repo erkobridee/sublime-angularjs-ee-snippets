@@ -3,9 +3,7 @@
 define(function(require) {
   'use strict';
 
-  ${1:require('path/file_js');}
-
-  ${0:return null;}
+  $0
 
 });
 ]]></content>
