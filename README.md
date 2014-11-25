@@ -143,17 +143,12 @@ require({
 **Content:**
 
 ```javascript
-define(
-// require.js dependency injection
-[
-  $1
-],
-
-// require.js module scope
-function($2) {
+define(function(require) {
   'use strict';
 
-  ${3: return ${0:object_or_function};}
+  $1
+
+  ${2:return ${0:object_or_function};}
 
 });
 ```
