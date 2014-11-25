@@ -4,11 +4,6 @@ controller('${1:Name}Ctrl', $1Ctrl);
 
 //---
 
-/*
-  Angular.js Style Guide Y030
-  https://github.com/johnpapa/angularjs-styleguide#style-y030
-*/
-
 $1Ctrl.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
 function $1Ctrl($2) {

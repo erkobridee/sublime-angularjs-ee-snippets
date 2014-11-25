@@ -974,17 +974,14 @@ constant('${1:name}', ${2:value});
 
 <pre>controller                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y030](https://github.com/johnpapa/angularjs-styleguide#style-y030)
+
 **Content:**
 
 ```javascript
 controller('${1:Name}Ctrl', $1Ctrl);
 
 //---
-
-/*
-  Angular.js Style Guide Y030
-  https://github.com/johnpapa/angularjs-styleguide#style-y030
-*/
 
 $1Ctrl.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
@@ -1006,14 +1003,30 @@ function $1Ctrl($2) {
 
 <pre>decorator                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024)
+
 **Content:**
 
 ```javascript
-decorator('${1:name}', [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}function (${2:\$provide}) {
-  \$provide.decorator('${3:name}', [${4/(?:.+)/'/g}${4/,[ ]*/', '/g}${4/(?:.+)/', /g}function(${4:\$delegate}) {
-    return ${5:\$delegate}$0;
-  }]);
-}]);
+decorator('${1:name}', $1Decorator);
+
+//---
+
+$1Decorator.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+
+function $1Decorator(${2:\$provide}) {
+  \$provide.decorator('${4:name}', $4Delegate);
+}
+
+//---
+
+$4Delegate.\$inject = [${4/(?:.+)/'/g}${4/,[ ]*/', '/g}${4/(?:.+)/',/g} $6];
+
+function $4Delegate(${5:\$delegate}) {
+
+  return ${7:\$delegate}$0;
+
+}
 ```
 
 #### Angular.js: [directive]

@@ -1,10 +1,24 @@
 <snippet>
   <content><![CDATA[
-decorator('${1:name}', [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}function (${2:\$provide}) {
-  \$provide.decorator('${3:name}', [${4/(?:.+)/'/g}${4/,[ ]*/', '/g}${4/(?:.+)/', /g}function(${4:\$delegate}) {
-    return ${5:\$delegate}$0;
-  }]);
-}]);
+decorator('${1:name}', $1Decorator);
+
+//---
+
+$1Decorator.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+
+function $1Decorator(${2:\$provide}) {
+  \$provide.decorator('${4:name}', $4Delegate);
+}
+
+//---
+
+$4Delegate.\$inject = [${4/(?:.+)/'/g}${4/,[ ]*/', '/g}${4/(?:.+)/',/g} $6];
+
+function $4Delegate(${5:\$delegate}) {
+
+  return ${7:\$delegate}$0;
+
+}
 ]]></content>
   <tabTrigger>decorator</tabTrigger>
   <scope>source.js</scope>
