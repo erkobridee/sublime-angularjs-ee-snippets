@@ -187,6 +187,8 @@ define(function(require) {
 
 <pre>bootstrap                  Angular.js EE</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024)
+
 **Content:**
 
 ```javascript
