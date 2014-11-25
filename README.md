@@ -346,7 +346,7 @@ define(function(require) {
   //---
 
   // mock resource dependencies injection
-  AllowPass.$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}$5];
+  AllowPass.\$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}$5];
 
   // mock resource definition
   function AllowPass(${1:\$httpBackend, regexpUrl}) {
@@ -379,7 +379,7 @@ define(function(require) {
 
   //---
 
-  AllowPass.$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}$6];
+  AllowPass.\$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}$6];
 
   function AllowPass(${1:\$httpBackend, regexpUrl}) {
 

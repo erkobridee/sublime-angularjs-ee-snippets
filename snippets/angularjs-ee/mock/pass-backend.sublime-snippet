@@ -9,7 +9,7 @@ define(function(require) {
 
   //---
 
-  AllowPass.$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}$6];
+  AllowPass.\$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}$6];
 
   function AllowPass(${1:\$httpBackend, regexpUrl}) {
 
