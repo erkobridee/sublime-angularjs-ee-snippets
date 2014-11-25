@@ -1035,28 +1035,32 @@ function $4Delegate(${5:\$delegate}) {
 
 <pre>directive                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y070](https://github.com/johnpapa/angularjs-styleguide#style-y070) [Y073](https://github.com/johnpapa/angularjs-styleguide#style-y073) [Y074](https://github.com/johnpapa/angularjs-styleguide#style-y074)
+
 **Content:**
 
 ```javascript
-directive(
-  // component name
-  '${1:name}',
+directive('${1:name}', $1);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// component definition
-function ($2) {
-  return {
-    restrict: '${3:A}',
-    link: function (scope, iElement, iAttrs) {
-
-      $0
-
-    }
+function $1() {
+  var directive = {
+    restrict: '${2:EA}',
+    link: $3
   };
-}]);
+
+  return directive;
+
+  //---
+
+  function ${3:linkFunc}(scope, element, attrs) {
+
+    ${0:// TODO: define code}
+
+  }
+
+}
 ```
 
 #### Angular.js: [directiveLong]
