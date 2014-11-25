@@ -1062,7 +1062,7 @@ directive('${1:name}', $1);
 
 function $1() {
   var directive = {
-    restrict: '${2:EA}',
+    restrict: 'EA$2',
     link: $3
   };
 
