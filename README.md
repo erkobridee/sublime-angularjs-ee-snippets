@@ -703,30 +703,26 @@ ${9:    console.debug('$2 Mock URL Interceptors');
 **Content:**
 
 ```javascript
-define(
-// require.js dependency injection
-[
-  'angular',
-  'shared/mock/backend'${2:,
-
-  './data$1'}
-],
-
-// require.js module scope
-function(ng, backend) {
+define(function(require) {
   'use strict';
 
+  var angular = require('angular');
+  var backend = require('shared/mock/backend');${2:
+  require('./data$1');}
 
-  backend.addResource(
+  backend.addResource(UrlInterceptors);
 
-    // mock resource dependencies injection
-    [
-      'Helpers',
-      '\$httpBackend', 'regexpUrl', 'getParams',
-      '\$log',$3
+  //---
 
-  // mock resource definition
-  function(helpers, \$httpBackend, regexpUrl, getParams, console$4) {
+  UrlInterceptors.$inject = [
+    'Helpers', '\$httpBackend', 'regexpUrl', 
+    'getParams', '\$log',$3
+  ];
+
+  function UrlInterceptors(
+    helpers, \$httpBackend, regexpUrl, 
+    getParams, console$4
+  ) {
 
     //--- @begin: URL interceptor
 
@@ -734,7 +730,7 @@ function(ng, backend) {
 
     //--- @end: URL interceptor
 
-  }]);
+  }
 
 });
 ```
