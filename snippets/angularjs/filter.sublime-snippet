@@ -1,11 +1,10 @@
 <snippet>
   <content><![CDATA[
-filter(
-  // filter name
-  '${1:name}',
+filter('${1:name}', $1);
 
-// filter definition
-function() {
+//---
+
+function $1() {
 
   return function(input, ${2:configValue}) {
     input = input || '';
@@ -16,7 +15,7 @@ function() {
     return out;
   };
 
-});
+}
 ]]></content>
   <tabTrigger>filter</tabTrigger>
   <scope>source.js</scope>

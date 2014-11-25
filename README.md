@@ -1182,15 +1182,16 @@ function $1($2) {
 
 <pre>filter                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024)
+
 **Content:**
 
 ```javascript
-filter(
-  // filter name
-  '${1:name}',
+filter('${1:name}', $1);
 
-// filter definition
-function() {
+//---
+
+function $1() {
 
   return function(input, ${2:configValue}) {
     input = input || '';
@@ -1201,7 +1202,7 @@ function() {
     return out;
   };
 
-});
+}
 ```
 
 #### Angular.js: [module]
@@ -1209,6 +1210,8 @@ function() {
 **Description:** 
 
 <pre>module                  Angular.js</pre>
+
+**Angular.js Style Guide:** [Y020](https://github.com/johnpapa/angularjs-styleguide#style-y020) [Y021](https://github.com/johnpapa/angularjs-styleguide#style-y021)
 
 **Content:**
 
