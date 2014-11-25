@@ -2,7 +2,7 @@
 
 <!-- toc -->
 * [Overview](#overview)
-* [Installation Options](#installation-options)
+* [How to install](#how-to-install)
 * [Snippets](#snippets)
   * [Require.js](#requirejs)
     * [Require.js: [config]](#requirejs-config)
@@ -73,20 +73,17 @@
 
 
 
-## Installation Options
+## How to install
 
-<!-- * Package Control: search for "AngularJS EE Snippets" -->
+Manually:
 
-* Manual: 
-
-  * Download the package and put it manually inside your `Packages` directory. (`Menu >  Preferences > Browser Packages...`)
-
-  * Clone repository inside your `Packages` directory.
+1 - Clone or [download](https://github.com/the-front/sublime-angularjs-ee-snippets/archive/master.zip) git repo into your packages folder (in ST, find Browse Packages... menu item to open this folder)
 
 ```sh
-$ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
-$ git clone https://github.com/erkobridee/sublime-angularjs-ee-snippets.git
+$ git clone https://github.com/the-front/sublime-angularjs-ee-snippets.git
 ```
+
+2 - Restart ST editor (if required)
 
 
 ## Snippets
