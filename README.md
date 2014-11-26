@@ -166,9 +166,9 @@ require('${1:path/file_js}');$0
 define(function(require) {
   'use strict';
 
-  $1
+  $0
 
-  ${2:return ${0:object_or_function};}
+  ${2:return ${1:object_or_function};}
 
 });
 ```
