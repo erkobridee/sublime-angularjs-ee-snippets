@@ -23,31 +23,30 @@
     * [Angular.js EE: [mock-urls]](#angularjs-ee-mock-urls)
   * [Angular.js](#angularjs)
     * [Angular.js: [angular]](#angularjs-angular)
-    * [Angular.js: [config]](#angularjs-config)
+    * [Angular.js: [module]](#angularjs-module)
     * [Angular.js: [constant]](#angularjs-constant)
-    * [Angular.js: [controller]](#angularjs-controller)
+    * [Angular.js: [value]](#angularjs-value)
+    * [Angular.js: [config]](#angularjs-config)
+    * [Angular.js: [run]](#angularjs-run)
+    * [Angular.js: [filter]](#angularjs-filter)
     * [Angular.js: [decorator]](#angularjs-decorator)
+    * [Angular.js: [provider]](#angularjs-provider)
+    * [Angular.js: [service]](#angularjs-service)
+    * [Angular.js: [factory]](#angularjs-factory)
+    * [Angular.js: [controller]](#angularjs-controller)
     * [Angular.js: [directive]](#angularjs-directive)
     * [Angular.js: [directiveLong]](#angularjs-directivelong)
-    * [Angular.js: [factory]](#angularjs-factory)
-    * [Angular.js: [filter]](#angularjs-filter)
-    * [Angular.js: [module]](#angularjs-module)
-    * [Angular.js: [provider]](#angularjs-provider)
-    * [Angular.js: [resource-id]](#angularjs-resource-id)
-    * [Angular.js: [resource]](#angularjs-resource)
-    * [Angular.js: [routeProvider]](#angularjs-routeprovider)
-    * [Angular.js: [when]](#angularjs-when)
-    * [Angular.js: [otherwise]](#angularjs-otherwise)
-    * [Angular.js: [run]](#angularjs-run)
-    * [Angular.js: [service]](#angularjs-service)
-    * [Angular.js: [value]](#angularjs-value)
+    * [ngResource](#ngresource)
+    * [ngRoute](#ngroute)
     * [Globals](#globals)
     * [jQuery lite](#jquery-lite)
     * [Scope functions](#scope-functions)
     * [Log functions](#log-functions)
     * [Variables](#variables)
     * [Directives (on HTML)](#directives-on-html)
+  * [Angular UI Router](#angular-ui-router)
 * [Contributing](#contributing)
+* [History](#history)
 * [LICENSE](#license)
 
 <!-- toc stop -->
@@ -960,6 +959,53 @@ ${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}\/${4:search}\
 angular
 ```
 
+#### Angular.js: [module]
+
+**Description:** 
+
+<pre>module                  Angular.js</pre>
+
+**Angular.js Style Guide:** [Y020](https://github.com/johnpapa/angularjs-styleguide#style-y020) [Y021](https://github.com/johnpapa/angularjs-styleguide#style-y021)
+
+**Content:**
+
+```javascript
+module(
+  // module name
+  '${1:moduleName}',
+
+  // module dependencies
+  [
+    // 'dependencyModuleName',
+    $2
+  ]
+);
+```
+
+#### Angular.js: [constant]
+
+**Description:** 
+
+<pre>constant                  Angular.js</pre>
+
+**Content:**
+
+```javascript
+constant('${1:name}', ${2:value});
+```
+
+#### Angular.js: [value]
+
+**Description:** 
+
+<pre>value                  Angular.js</pre>
+
+**Content:**
+
+```javascript
+value('${1:name}', ${2:value});
+```
+
 #### Angular.js: [config]
 
 **Description:** 
@@ -984,43 +1030,57 @@ function $3($1) {
 }
 ```
 
-#### Angular.js: [constant]
+#### Angular.js: [run]
 
 **Description:** 
 
-<pre>constant                  Angular.js</pre>
+<pre>run                  Angular.js</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
 **Content:**
 
 ```javascript
-constant('${1:name}', ${2:value});
-```
-
-#### Angular.js: [controller]
-
-**Description:** 
-
-<pre>controller                  Angular.js</pre>
-
-**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y030](https://github.com/johnpapa/angularjs-styleguide#style-y030) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
-
-**Content:**
-
-```javascript
-controller('${1:Name}Ctrl', $1Ctrl);
+run(runner);
 
 //---
 
-$1Ctrl.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+runner.\$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/',/g} $2];
 
-function $1Ctrl($2) {
-  var vm = this;
+function runner($1) {
 
-  ${4:// TODO: define vm (ViewModel) attribures}
+  ${0:// TODO: define code}
 
-  //---
+}
+```
 
-  ${5:// TODO: define internal processing code}
+#### Angular.js: [filter]
+
+**Description:** 
+
+<pre>filter                  Angular.js</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024)
+
+**Content:**
+
+```javascript
+filter('${1:name}', $1);
+
+//---
+
+// https://code.angularjs.org/1.3.3/docs/guide/filter
+
+function $1() {
+
+  return function(input, ${2:configValue}) {
+    input = input || '';
+    var out = '';
+
+    ${0://TODO: define filter process code}
+
+    return out;
+  };
 
 }
 ```
@@ -1053,6 +1113,137 @@ $4Delegate.\$inject = [${4/(?:.+)/'/g}${4/,[ ]*/', '/g}${4/(?:.+)/',/g} $6];
 function $4Delegate(${5:\$delegate}) {
 
   return ${7:\$delegate}$0;
+
+}
+```
+
+#### Angular.js: [provider]
+
+**Description:** 
+
+<pre>provider                  Angular.js</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
+**Content:**
+
+```javascript
+provider('${1:name}', $1);
+
+//---
+
+$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+
+function $1($2) {
+  this.\$get = $4;
+}
+
+$4.\$inject = [${5/(?:.+)/'/g}${5/,[ ]*/', '/g}${5/(?:.+)/',/g} $6];
+
+function ${4:$1Get}($5) {
+  return {
+    $0
+  };
+}
+```
+
+#### Angular.js: [service]
+
+**Description:** 
+
+<pre>service                  Angular.js</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
+**Content:**
+
+```javascript
+service('${1:name}', $1);
+
+//---
+
+$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+
+function $1($2) {
+  var service = this;
+
+  // TODO: review
+  service.att = 'value';
+  service.privateFunc = privateFunc;
+
+  ${0://TODO: define code}
+
+  //---
+
+  function privateFunc() {
+    return 'hello external world';
+  }
+
+}
+```
+
+#### Angular.js: [factory]
+
+**Description:** 
+
+<pre>factory                  Angular.js</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y050](https://github.com/johnpapa/angularjs-styleguide#style-y050) [Y051](https://github.com/johnpapa/angularjs-styleguide#style-y051) [Y052](https://github.com/johnpapa/angularjs-styleguide#style-y052) [Y053](https://github.com/johnpapa/angularjs-styleguide#style-y053) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
+**Content:**
+
+```javascript
+factory('${1:Name}', $1);
+
+//---
+
+$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+
+function $1($2) {
+
+  var service = {
+    attr: 'value',$0
+    func: hiddenFunction
+  };
+
+  return service;
+
+  //---
+
+  function hiddenFunction() {
+    
+    // TODO: define
+
+  }
+
+}
+```
+
+#### Angular.js: [controller]
+
+**Description:** 
+
+<pre>controller                  Angular.js</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y030](https://github.com/johnpapa/angularjs-styleguide#style-y030) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
+**Content:**
+
+```javascript
+controller('${1:Name}Ctrl', $1Ctrl);
+
+//---
+
+$1Ctrl.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+
+function $1Ctrl($2) {
+  var vm = this;
+
+  ${4:// TODO: define vm (ViewModel) attribures}
+
+  //---
+
+  ${5:// TODO: define internal processing code}
 
 }
 ```
@@ -1151,128 +1342,9 @@ function ${2:${1/([A-Za-z0-9]+)?/(?2::\u$1)/g}Controller}(${8:\$scope}) {
 }
 ```
 
-#### Angular.js: [factory]
+#### ngResource
 
-**Description:** 
-
-<pre>factory                  Angular.js</pre>
-
-**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y050](https://github.com/johnpapa/angularjs-styleguide#style-y050) [Y051](https://github.com/johnpapa/angularjs-styleguide#style-y051) [Y052](https://github.com/johnpapa/angularjs-styleguide#style-y052) [Y053](https://github.com/johnpapa/angularjs-styleguide#style-y053) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
-
-**Content:**
-
-```javascript
-factory('${1:Name}', $1);
-
-//---
-
-$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
-
-function $1($2) {
-
-  var service = {
-    attr: 'value',$0
-    func: hiddenFunction
-  };
-
-  return service;
-
-  //---
-
-  function hiddenFunction() {
-    
-    // TODO: define
-
-  }
-
-}
-```
-
-#### Angular.js: [filter]
-
-**Description:** 
-
-<pre>filter                  Angular.js</pre>
-
-**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024)
-
-**Content:**
-
-```javascript
-filter('${1:name}', $1);
-
-//---
-
-// https://code.angularjs.org/1.3.3/docs/guide/filter
-
-function $1() {
-
-  return function(input, ${2:configValue}) {
-    input = input || '';
-    var out = '';
-
-    ${0://TODO: define filter process code}
-
-    return out;
-  };
-
-}
-```
-
-#### Angular.js: [module]
-
-**Description:** 
-
-<pre>module                  Angular.js</pre>
-
-**Angular.js Style Guide:** [Y020](https://github.com/johnpapa/angularjs-styleguide#style-y020) [Y021](https://github.com/johnpapa/angularjs-styleguide#style-y021)
-
-**Content:**
-
-```javascript
-module(
-  // module name
-  '${1:moduleName}',
-
-  // module dependencies
-  [
-    // 'dependencyModuleName',
-    $2
-  ]
-);
-```
-
-#### Angular.js: [provider]
-
-**Description:** 
-
-<pre>provider                  Angular.js</pre>
-
-**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
-
-**Content:**
-
-```javascript
-provider('${1:name}', $1);
-
-//---
-
-$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
-
-function $1($2) {
-  this.\$get = $4;
-}
-
-$4.\$inject = [${5/(?:.+)/'/g}${5/,[ ]*/', '/g}${5/(?:.+)/',/g} $6];
-
-function ${4:$1Get}($5) {
-  return {
-    $0
-  };
-}
-```
-
-#### Angular.js: [resource-id]
+##### Angular.js: [resource-id]
 
 **Description:** 
 
@@ -1306,7 +1378,7 @@ function $1Resource(${2:\$resource}) {
 }
 ```
 
-#### Angular.js: [resource]
+##### Angular.js: [resource]
 
 **Description:** 
 
@@ -1334,7 +1406,9 @@ function $1Resource(${2:\$resource}) {
 }
 ```
 
-#### Angular.js: [routeProvider]
+#### ngRoute
+
+##### Angular.js: [routeProvider]
 
 **Description:** 
 
@@ -1367,7 +1441,7 @@ function configureRoutes(\$routeProvider) {
 }
 ```
 
-#### Angular.js: [when]
+##### Angular.js: [when]
 
 **Description:** 
 
@@ -1385,7 +1459,7 @@ when(
 )$0
 ```
 
-#### Angular.js: [otherwise]
+##### Angular.js: [otherwise]
 
 **Description:** 
 
@@ -1396,78 +1470,6 @@ when(
 ```javascript
 otherwise(${1:{ redirectTo: '/${2:route}' \}})
 ```
-
-#### Angular.js: [run]
-
-**Description:** 
-
-<pre>run                  Angular.js</pre>
-
-**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
-
-**Content:**
-
-```javascript
-run(runner);
-
-//---
-
-runner.\$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/',/g} $2];
-
-function runner($1) {
-
-  ${0:// TODO: define code}
-
-}
-```
-
-#### Angular.js: [service]
-
-**Description:** 
-
-<pre>service                  Angular.js</pre>
-
-**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
-
-**Content:**
-
-```javascript
-service('${1:name}', $1);
-
-//---
-
-$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
-
-function $1($2) {
-  var service = this;
-
-  // TODO: review
-  service.att = 'value';
-  service.privateFunc = privateFunc;
-
-  ${0://TODO: define code}
-
-  //---
-
-  function privateFunc() {
-    return 'hello external world';
-  }
-
-}
-```
-
-#### Angular.js: [value]
-
-**Description:** 
-
-<pre>value                  Angular.js</pre>
-
-**Content:**
-
-```javascript
-value('${1:name}', ${2:value});
-```
-
 
 #### Globals
 
@@ -1611,6 +1613,10 @@ Completions won’t show in HTML unless you have added this line to your `User.s
   {"selector": "text.html meta.tag", "characters": " " } 
 ]
 ```
+
+### Angular UI Router
+
+>> TODO: define items
 
 --
 
