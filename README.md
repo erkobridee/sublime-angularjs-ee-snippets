@@ -1026,7 +1026,9 @@ state('${1:name}.${2:substate}', {
 **Content:**
 
 ```javascript
-// TODO: define
+\$urlRouterProvider
+  .when('$1', '/$2')
+  .otherwise("/${3:404}")$0
 ```
 
 #### Angular UI Router: [when]
