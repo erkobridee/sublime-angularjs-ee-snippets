@@ -28,7 +28,6 @@
     * [Angular UI Router: [when]](#angular-ui-router-when)
     * [Angular UI Router: [otherwise]](#angular-ui-router-otherwise)
   * [Angular.js](#angularjs)
-    * [Angular.js: [angular]](#angularjs-angular)
     * [Angular.js: [module]](#angularjs-module)
     * [Angular.js: [constant]](#angularjs-constant)
     * [Angular.js: [value]](#angularjs-value)
@@ -1056,18 +1055,6 @@ otherwise("/${1:redirectTo}")$0
 ```
 
 ### Angular.js
-
-#### Angular.js: [angular]
-
-**Description:** 
-
-<pre>angular                  Angular.js</pre>
-
-**Content:**
-
-```javascript
-angular
-```
 
 #### Angular.js: [module]
 
