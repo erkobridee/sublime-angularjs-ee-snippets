@@ -1266,22 +1266,23 @@ function ${4:$1Get}($5) {
 
 <pre>resource-id                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y050](https://github.com/johnpapa/angularjs-styleguide#style-y050) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
 **Content:**
 
 ```javascript
-factory(
-  // resource name
-  '${1:Name}Resource',
+factory('${1:Name}Resource', $1Resource);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// resource definition
-function (${2:\$resource}) {
+// https://code.angularjs.org/1.3.3/docs/api/ngResource/service/$resource
+
+$1Resource.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+
+function $1Resource(${2:\$resource}) {
 
   return \$resource(
-    '${3:url}/:id',
+    '${4:rest}/${1/([A-Za-z0-9]+)?/(?2::\l$1)/g}/:id',
     {
       'id': ''$0
     },
@@ -1290,7 +1291,7 @@ function (${2:\$resource}) {
     }
   );
 
-}]);
+}
 ```
 
 #### Angular.js: [resource]
