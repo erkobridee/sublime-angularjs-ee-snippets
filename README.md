@@ -1391,14 +1391,22 @@ otherwise(${1:{ redirectTo: '/${2:route}' \}})
 
 <pre>run                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
 **Content:**
 
 ```javascript
-run([${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}function ($1) {
+run(runner);
 
-  $0
+//---
 
-}]);
+runner.\$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/',/g} $2];
+
+function runner($1) {
+
+  ${0:// TODO: define code}
+
+}
 ```
 
 #### Angular.js: [service]

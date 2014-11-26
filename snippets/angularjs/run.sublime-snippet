@@ -1,10 +1,16 @@
 <snippet>
   <content><![CDATA[
-run([${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/', /g}function ($1) {
+run(runner);
 
-  $0
+//---
 
-}]);
+runner.\$inject = [${1/(?:.+)/'/g}${1/,[ ]*/', '/g}${1/(?:.+)/',/g} $2];
+
+function runner($1) {
+
+  ${0:// TODO: define code}
+
+}
 ]]></content>
   <tabTrigger>run</tabTrigger>
   <scope>source.js</scope>
