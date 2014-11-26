@@ -55,7 +55,17 @@
 
 ## Overview
 
-* Sublime Text 2 / 3 Snippets and Completions for [Angular.js](http://angularjs.org/), [[GitHub] erkobridee / angularjs-ee-boilerplate](https://github.com/erkobridee/angularjs-ee-boilerplate) v [0.6.0](https://github.com/erkobridee/angularjs-ee-boilerplate/tree/0.6.0) and [Require.js](http://requirejs.org/)
+* Sublime Text 2 / 3 Snippets and Completions for: 
+
+  * [[GitHub] erkobridee / angularjs-ee-boilerplate](https://github.com/the-front/angularjs-ee-boilerplate) v[1.4.0](https://github.com/the-front/angularjs-ee-boilerplate/releases/tag/1.4.0)
+
+    * [Angular.js](http://angularjs.org/)
+
+      * [[GitHub] johnpapa / angularjs-styleguide](https://github.com/johnpapa/angularjs-styleguide) - A starting point for AngularJS development teams to provide consistency through good practices
+
+    * Angular UI Router - TODO: define snippets
+
+    *[Require.js](http://requirejs.org/)
 
 * Based on: [[GitHub] maxhoffmann / angular-snippets](https://github.com/maxhoffmann/angular-snippets)
 
@@ -1666,19 +1676,12 @@ Completions won’t show in HTML unless you have added this line to your `User.s
   4. Push to the branch: `git push origin my-new-feature`
   5. Submit a pull request :D
 
-<!--
+
 ## History
 
-Check [Release](https://github.com/erkobridee/sublime-angularjs-ee-snippets/releases) list.
+Check [Release](https://github.com/the-front/sublime-angularjs-ee-snippets/releases) list.
 
-## TODO:
-
-Publish to Sublime Package Control
-
-https://sublime.wbond.net/docs/submitting_a_package
-
--->
 
 ## LICENSE
 
-MIT : [erkobridee.mit-license.org](http://erkobridee.mit-license.org) 
+- [MIT](LICENSE)
