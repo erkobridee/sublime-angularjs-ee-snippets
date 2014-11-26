@@ -21,6 +21,12 @@
     * [Angular.js EE: [mock-data]](#angularjs-ee-mock-data)
     * [Angular.js EE: [mock-backend]](#angularjs-ee-mock-backend)
     * [Angular.js EE: [mock-urls]](#angularjs-ee-mock-urls)
+  * [Angular UI Router](#angular-ui-router)
+    * [Angular UI Router: [stateProvider]](#angular-ui-router-stateprovider)
+    * [Angular UI Router: [state]](#angular-ui-router-state)
+    * [Angular UI Router: [urlRouterProvider]](#angular-ui-router-urlrouterprovider)
+    * [Angular UI Router: [when]](#angular-ui-router-when)
+    * [Angular UI Router: [otherwise]](#angular-ui-router-otherwise)
   * [Angular.js](#angularjs)
     * [Angular.js: [angular]](#angularjs-angular)
     * [Angular.js: [module]](#angularjs-module)
@@ -942,6 +948,109 @@ ${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}\/${4:search}\
 
     return [200, angular.copy(result)];
   \});
+```
+
+### Angular UI Router
+
+#### Angular UI Router: [stateProvider]
+
+**Description:** 
+
+<pre>stateProvider                  Angular UI Router</pre>
+
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
+**Content:**
+
+```javascript
+config(configureStates);
+
+//---
+
+// https://github.com/angular-ui/ui-router/wiki
+
+configureStates.\$inject = ['\$stateProvider', '\$urlRouterProvider'];
+
+function configureStates(\$stateProvider, \$urlRouterProvider) {
+
+${2:  \$urlRouterProvider
+    .when('', '/$1') // default
+    .when('/', '/$1') // default
+    .otherwise("/404"); // For any unmatched url, redirect to /404
+}
+  \$stateProvider
+    .state('${1:state}', {
+      url: '/$1',
+      views: {
+        'master': {
+          templateUrl   : 'app/main/templates/layout.html'
+        },
+        'content@$1': {
+          templateUrl   : 'app/$1/template.html',
+          controller    : '${1/([A-Za-z0-9]+)?/(?2::\u$1)/g}Ctrl',
+          controllerAs  : 'vm'
+        }
+      }
+    })$0;
+
+}
+```
+
+#### Angular UI Router: [state]
+
+**Description:** 
+
+<pre>state                  Angular UI Router</pre>
+
+**Content:**
+
+```javascript
+state('${1:name}.${2:substate}', {
+  url: '/$2',
+  views: {
+    'content@$1': {
+      templateUrl   : 'app/$1/templates/$2.html',
+      controller    : '${1/([A-Za-z0-9]+)?/(?2::\u$1)/g}$3$2Ctrl',
+      controllerAs  : 'vm$4'
+    }
+  }
+})$0
+```
+
+#### Angular UI Router: [urlRouterProvider]
+
+**Description:** 
+
+<pre>urlRouterProvider                  Angular UI Router</pre>
+
+**Content:**
+
+```javascript
+// TODO: define
+```
+
+#### Angular UI Router: [when]
+
+**Description:** 
+
+<pre>when                  Angular UI Router</pre>
+
+**Content:**
+
+```javascript
+// TODO: define
+```
+
+#### Angular UI Router: [otherwise]
+
+**Description:** 
+
+<pre>otherwise                  Angular UI Router</pre>
+
+**Content:**
+
+```javascript
+// TODO: define
 ```
 
 

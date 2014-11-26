@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+state('${1:name}.${2:substate}', {
+  url: '/$2',
+  views: {
+    'content@$1': {
+      templateUrl   : 'app/$1/templates/$2.html',
+      controller    : '${1/([A-Za-z0-9]+)?/(?2::\u$1)/g}$3$2Ctrl',
+      controllerAs  : 'vm$4'
+    }
+  }
+})$0
+]]></content>
+  <tabTrigger>state</tabTrigger>
+  <scope>source.js</scope>
+  <description>Angular UI Router</description>
+</snippet>
