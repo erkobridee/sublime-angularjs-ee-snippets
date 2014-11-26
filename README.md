@@ -1415,23 +1415,33 @@ function runner($1) {
 
 <pre>service                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
 **Content:**
 
 ```javascript
-service(
-  // service name
-  '${1:name}',
+service('${1:name}', $1);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// service definition
-function ($2) {
+$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
-  $0
+function $1($2) {
+  var service = this;
 
-}]);
+  // TODO: review
+  service.att = 'value';
+  service.privateFunc = privateFunc;
+
+  ${0://TODO: define code}
+
+  //---
+
+  function privateFunc() {
+    return 'hello external world';
+  }
+
+}
 ```
 
 #### Angular.js: [value]

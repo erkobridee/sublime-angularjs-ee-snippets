@@ -1,19 +1,27 @@
 <snippet>
   <content><![CDATA[
-service(
-  // service name
-  '${1:name}',
+service('${1:name}', $1);
 
-  // dependencies injection
-  [
-    ${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/', /g}
+//---
 
-// service definition
-function ($2) {
+$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
-  $0
+function $1($2) {
+  var service = this;
 
-}]);
+  // TODO: review
+  service.att = 'value';
+  service.privateFunc = privateFunc;
+
+  ${0://TODO: define code}
+
+  //---
+
+  function privateFunc() {
+    return 'hello external world';
+  }
+
+}
 ]]></content>
   <tabTrigger>service</tabTrigger>
   <scope>source.js</scope>
