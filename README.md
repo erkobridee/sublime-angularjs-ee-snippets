@@ -63,15 +63,17 @@
 
       * [[GitHub] johnpapa / angularjs-styleguide](https://github.com/johnpapa/angularjs-styleguide) - A starting point for AngularJS development teams to provide consistency through good practices
 
-    * Angular UI Router - TODO: define snippets
+    * [Angular UI Router](https://angular-ui.github.io/ui-router/site/) - TODO: define snippets
 
-    *[Require.js](http://requirejs.org/)
-
-* Based on: [[GitHub] maxhoffmann / angular-snippets](https://github.com/maxhoffmann/angular-snippets)
+    * [Require.js](http://requirejs.org/)
 
 --
 
-* This snippet library provides completions for Angular.js and Require.js (focused to the **angularjs-ee-boilerplate** code).
+* Initially based on: [[GitHub] maxhoffmann / angular-snippets](https://github.com/maxhoffmann/angular-snippets)
+
+--
+
+* This snippet library provides completions for Angular.js, Angular UI Router and Require.js (focused to the **angularjs-ee-boilerplate** code).
 
 * Sublime Text uses fuzzy searching for snippets and completions therefore you don’t have to write triggers completely.
 
