@@ -68,7 +68,7 @@
 
       * [[GitHub] johnpapa / angularjs-styleguide](https://github.com/johnpapa/angularjs-styleguide) - A starting point for AngularJS development teams to provide consistency through good practices
 
-    * [Angular UI Router](https://angular-ui.github.io/ui-router/site/) - TODO: define snippets
+    * [Angular UI Router](https://angular-ui.github.io/ui-router/site/)
 
     * [Require.js](http://requirejs.org/)
 
@@ -1040,7 +1040,7 @@ state('${1:name}.${2:substate}', {
 **Content:**
 
 ```javascript
-// TODO: define
+when('$1', '/$2')$0
 ```
 
 #### Angular UI Router: [otherwise]
@@ -1052,9 +1052,8 @@ state('${1:name}.${2:substate}', {
 **Content:**
 
 ```javascript
-// TODO: define
+otherwise("/${1:redirectTo}")$0
 ```
-
 
 ### Angular.js
 
