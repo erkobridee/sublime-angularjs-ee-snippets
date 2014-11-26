@@ -1328,16 +1328,20 @@ function $1Resource(${2:\$resource}) {
 
 <pre>routeProvider                  Angular.js</pre>
 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
+
 **Content:**
 
 ```javascript
-config(
+config(configureRoutes);
 
-  // dependencies injection
-  ['\$routeProvider',
+//---
 
-// routes definition
-function (\$routeProvider) {
+// https://code.angularjs.org/1.3.3/docs/api/ngRoute
+
+configureRoutes.\$inject = ['\$routeProvider'];
+
+function configureRoutes(\$routeProvider) {
 
   \$routeProvider
     .when(
@@ -1346,9 +1350,9 @@ function (\$routeProvider) {
         controller: '${2:ControllerName}Ctrl',
         templateUrl: '${3:app}/${4:module}/${5:template}.html'
       }
-    )$0;
+    );$0
 
-}]);
+}
 ```
 
 #### Angular.js: [when]
