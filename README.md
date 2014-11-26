@@ -1326,7 +1326,7 @@ function $1Resource(${2:\$resource}) {
 
 **Description:** 
 
-<pre>routeProvider                  Angular.js</pre>
+<pre>routeProvider                  Angular.js ngRoute</pre>
 
 **Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
@@ -1350,7 +1350,7 @@ function configureRoutes(\$routeProvider) {
         controller: '${2:ControllerName}Ctrl',
         templateUrl: '${3:app}/${4:module}/${5:template}.html'
       }
-    );$0
+    )$0;
 
 }
 ```
@@ -1359,7 +1359,7 @@ function configureRoutes(\$routeProvider) {
 
 **Description:** 
 
-<pre>when                  Angular.js</pre>
+<pre>when                  Angular.js ngRoute</pre>
 
 **Content:**
 
@@ -1377,7 +1377,7 @@ when(
 
 **Description:** 
 
-<pre>otherwise                  Angular.js</pre>
+<pre>otherwise                  Angular.js ngRoute</pre>
 
 **Content:**
 

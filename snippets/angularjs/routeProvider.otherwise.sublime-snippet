@@ -4,5 +4,5 @@ otherwise(${1:{ redirectTo: '/${2:route}' \}})
 ]]></content>
   <tabTrigger>otherwise</tabTrigger>
   <scope>source.js</scope>
-  <description>Angular.js</description>
+  <description>Angular.js ngRoute</description>
 </snippet>

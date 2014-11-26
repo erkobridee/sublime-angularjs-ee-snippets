@@ -10,5 +10,5 @@ when(
 ]]></content>
   <tabTrigger>when</tabTrigger>
   <scope>source.js</scope>
-  <description>Angular.js</description>
+  <description>Angular.js ngRoute</description>
 </snippet>

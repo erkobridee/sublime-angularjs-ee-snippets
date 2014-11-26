@@ -17,11 +17,11 @@ function configureRoutes(\$routeProvider) {
         controller: '${2:ControllerName}Ctrl',
         templateUrl: '${3:app}/${4:module}/${5:template}.html'
       }
-    );$0
+    )$0;
 
 }
 ]]></content>
   <tabTrigger>routeProvider</tabTrigger>
   <scope>source.js</scope>
-  <description>Angular.js</description>
+  <description>Angular.js ngRoute</description>
 </snippet>
