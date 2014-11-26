@@ -68,7 +68,7 @@
 
       * [[GitHub] johnpapa / angularjs-styleguide](https://github.com/johnpapa/angularjs-styleguide) - A starting point for AngularJS development teams to provide consistency through good practices
 
-    * [Angular UI Router](https://angular-ui.github.io/ui-router/site/)
+    * [Angular UI Router](https://angular-ui.github.io/ui-router/site/) - [wiki](https://github.com/angular-ui/ui-router/wiki)
 
     * [Require.js](http://requirejs.org/)
 
