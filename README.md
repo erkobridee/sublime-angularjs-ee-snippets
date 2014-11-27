@@ -1784,9 +1784,9 @@ Completions won’t show in HTML unless you have added this line to your `User.s
   5. Submit a pull request :D
 
 
-## History
+## CHANGELOG
 
-Check [Release](https://github.com/the-front/sublime-angularjs-ee-snippets/releases) list.
+Check [Releases](https://github.com/the-front/sublime-angularjs-ee-snippets/releases)
 
 
 ## LICENSE
