@@ -256,9 +256,10 @@ define(function(require) {
   'use strict';
 
   var module = require('./module');
-${1:  require('./resource');}
-  require('./controller');
-  require('./routes');$2
+${1:  require('./resource');
+}  require('./controller');
+  require('./states');$2
+  require('./routes');$3
 
   return module;$0
 
