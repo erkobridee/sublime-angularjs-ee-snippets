@@ -1530,8 +1530,9 @@ function configureRoutes(\$routeProvider) {
     .when(
       '/${1:route}',
       {
-        controller: '${2:ControllerName}Ctrl',
-        templateUrl: '${3:app}/${4:module}/${5:template}.html'
+        templateUrl   : '${3:app}/${4:module}/${5:template}.html',
+        controller    : '${2:ControllerName}Ctrl',
+        controllerAs  : '${6:vm}'
       }
     )$0;
 
@@ -1550,8 +1551,9 @@ function configureRoutes(\$routeProvider) {
 when(
   '/${1:route}',
   {
-    controller: '${2:ControllerName}Ctrl',
-    templateUrl: '${3:app}/${4:module}/${5:template}.html'
+    templateUrl   : '${3:app}/${4:module}/${5:template}.html',
+    controller    : '${2:ControllerName}Ctrl',
+    controllerAs  : '${6:vm}'
   }
 )$0
 ```
