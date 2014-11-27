@@ -61,7 +61,7 @@
 
 * Sublime Text 2 / 3 Snippets and Completions for: 
 
-  * [[GitHub] erkobridee / angularjs-ee-boilerplate](https://github.com/the-front/angularjs-ee-boilerplate) v[1.4.0](https://github.com/the-front/angularjs-ee-boilerplate/releases/tag/1.4.0)
+  * [[GitHub] erkobridee / angularjs-ee-boilerplate](https://github.com/the-front/angularjs-ee-boilerplate) v[1.4.2](https://github.com/the-front/angularjs-ee-boilerplate/releases/tag/1.4.2)
 
     * [Angular.js](http://angularjs.org/)
 
