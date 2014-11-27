@@ -5,7 +5,7 @@ when(
   {
     templateUrl   : '${3:app}/${4:module}/${5:template}.html',
     controller    : '${2:ControllerName}Ctrl',
-    controllerAs  : '${6:vm}'
+    controllerAs  : 'vm$6'
   }
 )$0
 ]]></content>

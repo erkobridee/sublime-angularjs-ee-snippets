@@ -982,12 +982,12 @@ ${2:  \$urlRouterProvider
       url: '/$1',
       views: {
         'master': {
-          templateUrl   : 'app/main/templates/layout.html'
+          templateUrl   : 'app/main/templates/layout$3.html'
         },
         'content@$1': {
-          templateUrl   : 'app/$1/template.html',
+          templateUrl   : 'app/$1/${5:template}.html',
           controller    : '${1/([A-Za-z0-9]+)?/(?2::\u$1)/g}Ctrl',
-          controllerAs  : 'vm'
+          controllerAs  : 'vm$4'
         }
       }
     })$0;
@@ -1027,7 +1027,7 @@ state('${1:name}.${2:substate}', {
 ```javascript
 \$urlRouterProvider
   .when('$1', '/$2')
-  .otherwise("/${3:404}")$0
+  .otherwise("/${3:redirectTo}")$0;
 ```
 
 #### Angular UI Router: [when]
@@ -1532,7 +1532,7 @@ function configureRoutes(\$routeProvider) {
       {
         templateUrl   : '${3:app}/${4:module}/${5:template}.html',
         controller    : '${2:ControllerName}Ctrl',
-        controllerAs  : '${6:vm}'
+        controllerAs  : 'vm$6'
       }
     )$0;
 
@@ -1553,7 +1553,7 @@ when(
   {
     templateUrl   : '${3:app}/${4:module}/${5:template}.html',
     controller    : '${2:ControllerName}Ctrl',
-    controllerAs  : '${6:vm}'
+    controllerAs  : 'vm$6'
   }
 )$0
 ```

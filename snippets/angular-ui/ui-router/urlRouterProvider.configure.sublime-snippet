@@ -2,7 +2,7 @@
   <content><![CDATA[
 \$urlRouterProvider
   .when('$1', '/$2')
-  .otherwise("/${3:404}")$0;
+  .otherwise("/${3:redirectTo}")$0;
 ]]></content>
   <tabTrigger>urlRouterProvider</tabTrigger>
   <scope>source.js</scope>
