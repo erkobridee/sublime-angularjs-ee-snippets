@@ -1167,7 +1167,7 @@ filter('${1:name}', $1);
 
 //---
 
-// https://code.angularjs.org/1.3.3/docs/guide/filter
+// https://docs.angularjs.org/guide/filter
 
 function $1() {
 
