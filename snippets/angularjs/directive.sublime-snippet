@@ -4,9 +4,10 @@ directive('${1:name}', $1);
 
 //---
 
-// https://code.angularjs.org/1.3.3/docs/guide/directive
+// https://docs.angularjs.org/guide/directive
 
 function $1() {
+
   var directive = {
     restrict: 'EA$2',
     link: $3
@@ -16,7 +17,7 @@ function $1() {
 
   //---
 
-  function ${3:linkFunc}(scope, element, attrs) {
+  function ${3:linkingFn}(scope, element, attrs) {
 
     ${0:// TODO: define code}
 

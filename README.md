@@ -1361,9 +1361,10 @@ directive('${1:name}', $1);
 
 //---
 
-// https://code.angularjs.org/1.3.3/docs/guide/directive
+// https://docs.angularjs.org/guide/directive
 
 function $1() {
+
   var directive = {
     restrict: 'EA$2',
     link: $3
@@ -1373,7 +1374,7 @@ function $1() {
 
   //---
 
-  function ${3:linkFunc}(scope, element, attrs) {
+  function ${3:linkingFn}(scope, element, attrs) {
 
     ${0:// TODO: define code}
 
@@ -1397,46 +1398,70 @@ directive('${1:name}', $1);
 
 //---
 
-// https://code.angularjs.org/1.3.3/docs/guide/directive
+// https://docs.angularjs.org/guide/directive
+// https://docs.angularjs.org/api/ng/service/\$compile
 
-function $1() {
+${4:$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+}
+function $1($2) {
+
+  var scope = {
+    max: '='$5
+  };
+
   var directive = {
-    restrict: 'EA$3',
-    template: '<div>min: {{vm.min}} :: max: {{vm.max}}</div>',$4
-    templateUrl: '${5:path/directive/template}.html',$6
-    scope: {
-      max: '='
-    },
-    link: ${7:linkFunc},
-    controller: $2,
-    controllerAs: 'vm'
+    restrict: 'EA$6',
+    scope: scope,
+
+    controller: controllerFn,
+    controllerAs: 'vm$7',
+    // So our isolated scope will be stored
+    // on the `this` context of our controller
+    // instead of $scope
+    bindToController: true,
+
+    link: linkingFn,
+
+    template: templateFn,
+    templateUrl: templateUrlFn
   };
 
   return directive;
 
   //---
 
-  function $7(scope, el, attr, ctrl) {
+  // controllerFn.\$inject = [];
+
+  function controllerFn() {
+    var vm = this;$0
+
+    vm.min = 3; 
+    console.log('CTRL: vm.min = %i', vm.min);
+    console.log('CTRL: vm.max = %i', vm.max);
+  }
+
+  //---
+
+  function linkingFn(scope, el, attr, ctrl) {
     console.log('LINK: scope.max = %i', scope.max);
     console.log('LINK: scope.vm.min = %i', scope.vm.min);
     console.log('LINK: scope.vm.max = %i', scope.vm.max);
   }
 
-}
+  //---
 
-//---
+  function templateFn(tElement, tAttrs) {
+    return [
+      '<div>min: {{vm.min}} :: max: {{vm.max}}</div>'
+    ].join('');
+  }
 
-$2.\$inject = [${7/(?:.+)/'/g}${8/,[ ]*/', '/g}${8/(?:.+)/',/g} $9];
+  //---
 
-function ${2:${1/([A-Za-z0-9]+)?/(?2::\u$1)/g}Controller}(${8:\$scope}) {
-  // Injecting $scope just for comparison
-  var vm = this;$0
+  function templateUrlFn(tElement, tAttrs) {
+    return 'path/directive/template.html';
+  }
 
-  vm.min = 3; 
-  vm.max = \$scope.max; 
-  console.log('CTRL: $scope.max = %i', \$scope.max);
-  console.log('CTRL: vm.min = %i', vm.min);
-  console.log('CTRL: vm.max = %i', vm.max);
 }
 ```
 
