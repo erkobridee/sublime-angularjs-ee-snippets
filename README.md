@@ -1546,7 +1546,7 @@ config(configureRoutes);
 
 //---
 
-// https://code.angularjs.org/1.3.3/docs/api/ngRoute
+// https://docs.angularjs.org/api/ngRoute
 
 configureRoutes.\$inject = ['\$routeProvider'];
 
