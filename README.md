@@ -290,7 +290,7 @@ ${6:  require('uiBootstrap');}
   return angular.module(
     // module name
     '${1:moduleName}',
-  
+
     // module dependencies
     [
 ${3:      'ngResource',
