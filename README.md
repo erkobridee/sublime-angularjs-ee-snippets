@@ -1482,7 +1482,7 @@ factory('${1:Name}Resource', $1Resource);
 
 //---
 
-// https://code.angularjs.org/1.3.3/docs/api/ngResource/service/$resource
+// https://docs.angularjs.org/api/ngResource/service/$resource
 
 $1Resource.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
@@ -1516,7 +1516,7 @@ factory('${1:Name}Resource', $1Resource);
 
 //---
 
-// https://code.angularjs.org/1.3.3/docs/api/ngResource/service/$resource
+// https://docs.angularjs.org/api/ngResource/service/$resource
 
 $1Resource.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
