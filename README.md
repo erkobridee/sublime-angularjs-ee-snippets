@@ -1413,7 +1413,7 @@ function $1($2) {
     restrict: 'EA$6',
     scope: scope,
 
-    controller: controllerFn,
+    controller: ControllerFn,
     controllerAs: 'vm$7',
     // So our isolated scope will be stored
     // on the `this` context of our controller
@@ -1430,9 +1430,9 @@ function $1($2) {
 
   //---
 
-  // controllerFn.\$inject = [];
+  // ControllerFn.\$inject = [];
 
-  function controllerFn() {
+  function ControllerFn() {
     var vm = this;$0
 
     vm.min = 3; 
