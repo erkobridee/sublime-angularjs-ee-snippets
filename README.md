@@ -59,7 +59,7 @@
 
 ## Overview
 
-* Sublime Text 2 / 3 Snippets and Completions for: 
+* Sublime Text 2 / 3 Snippets and Completions for:
 
   * [[GitHub] erkobridee / angularjs-ee-boilerplate](https://github.com/the-front/angularjs-ee-boilerplate) v[1.4.2](https://github.com/the-front/angularjs-ee-boilerplate/releases/tag/1.4.2)
 
@@ -87,15 +87,24 @@
 
 ## How to install
 
-Manually:
+* [Package Control](https://packagecontrol.io/) - [Docs](https://packagecontrol.io/docs/usage)
 
-1 - Clone or [download](https://github.com/the-front/sublime-angularjs-ee-snippets/archive/master.zip) git repo into your packages folder (in ST, find Browse Packages... menu item to open this folder)
+  1 - Add Repository
 
-```sh
-$ git clone https://github.com/the-front/sublime-angularjs-ee-snippets.git
-```
+  > `https://github.com/the-front/sublime-angularjs-ee-snippets`
 
-2 - Restart ST editor (if required)
+  2 - search for `sublime-angularjs-ee-snippets`
+
+
+* Manually:
+
+  1 - Clone or [download](https://github.com/the-front/sublime-angularjs-ee-snippets/archive/master.zip) git repo into your packages folder (in ST, find Browse Packages... menu item to open this folder)
+
+  ```sh
+  $ git clone https://github.com/the-front/sublime-angularjs-ee-snippets.git
+  ```
+
+  2 - Restart ST editor (if required)
 
 
 ## Snippets
@@ -109,7 +118,7 @@ Below is a list of all triggers and respectives snippets currently supported on 
 
 #### Require.js: [config]
 
-**Description:** 
+**Description:**
 
 <pre>config                  Require.js</pre>
 
@@ -148,7 +157,7 @@ require({
 
 #### Require.js: [require]
 
-**Description:** 
+**Description:**
 
 <pre>require                  Require.js</pre>
 
@@ -160,7 +169,7 @@ require('${1:path/file_js}');$0
 
 #### Require.js: [define]
 
-**Description:** 
+**Description:**
 
 <pre>define                  Require.js</pre>
 
@@ -179,7 +188,7 @@ define(function(require) {
 
 #### Require.js: [load]
 
-**Description:** 
+**Description:**
 
 <pre>load                  Require.js</pre>
 
@@ -199,7 +208,7 @@ define(function(require) {
 
 #### Angular.js EE: [bootstrap]
 
-**Description:** 
+**Description:**
 
 <pre>bootstrap                  Angular.js EE</pre>
 
@@ -245,7 +254,7 @@ ${2:        // enable mock and intercep $HTTP requests
 
 #### Angular.js EE: [package]
 
-**Description:** 
+**Description:**
 
 <pre>package                  Angular.js EE</pre>
 
@@ -268,11 +277,11 @@ ${1:  require('./resource');
 
 #### Angular.js EE: [module]
 
-**Description:** 
+**Description:**
 
 <pre>module                  Angular.js EE</pre>
 
-**Angular.js Style Guide:** [Y020](https://github.com/johnpapa/angularjs-styleguide#style-y020) [Y021](https://github.com/johnpapa/angularjs-styleguide#style-y021) 
+**Angular.js Style Guide:** [Y020](https://github.com/johnpapa/angularjs-styleguide#style-y020) [Y021](https://github.com/johnpapa/angularjs-styleguide#style-y021)
 
 **Content:**
 
@@ -308,7 +317,7 @@ ${8:      require('shared/fend/input-utils/package').name,
 
 #### Angular.js EE: [module-use]
 
-**Description:** 
+**Description:**
 
 <pre>module-use                  Angular.js EE</pre>
 
@@ -327,7 +336,7 @@ define(function(require) {
 
 #### Angular.js EE: [mock-package]
 
-**Description:** 
+**Description:**
 
 <pre>mock-package                  Angular.js EE</pre>
 
@@ -350,11 +359,11 @@ define(function(require) {
 
 #### Angular.js EE: [mock-pass-urls]
 
-**Description:** 
+**Description:**
 
 <pre>mock-pass-urls                  Angular.js EE</pre>
 
-**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091) 
+**Angular.js Style Guide:** [Y024](https://github.com/johnpapa/angularjs-styleguide#style-y024) [Y091](https://github.com/johnpapa/angularjs-styleguide#style-y091)
 
 **Content:**
 
@@ -386,7 +395,7 @@ ${2:    // Allow GET users from GitHub API}
 
 #### Angular.js EE: [mock-pass-backend]
 
-**Description:** 
+**Description:**
 
 <pre>mock-pass-backend                  Angular.js EE</pre>
 
@@ -451,7 +460,7 @@ ${5:    // search
 
 > Use [LokiJS](http://lokijs.org/) to manage object collection
 
-**Description:** 
+**Description:**
 
 <pre>mock-data                  Angular.js EE</pre>
 
@@ -566,7 +575,7 @@ ${5:          // manual fake data definition}
 
 > Complete CRUD + Search
 
-**Description:** 
+**Description:**
 
 <pre>mock-backend                  Angular.js EE</pre>
 
@@ -725,7 +734,7 @@ ${9:    console.debug('$2 Mock URL Interceptors');
 
 #### Angular.js EE: [mock-urls]
 
-**Description:** 
+**Description:**
 
 <pre>mock-urls                  Angular.js EE</pre>
 
@@ -746,12 +755,12 @@ define(function(require) {
   //---
 
   UrlInterceptors.$inject = [
-    'Helpers', '\$httpBackend', 'regexpUrl', 
+    'Helpers', '\$httpBackend', 'regexpUrl',
     'getParams', '\$log',$3
   ];
 
   function UrlInterceptors(
-    helpers, \$httpBackend, regexpUrl, 
+    helpers, \$httpBackend, regexpUrl,
     getParams, console$4
   ) {
 
@@ -770,7 +779,7 @@ define(function(require) {
 
 > HTTP GET - all
 
-**Description:** 
+**Description:**
 
 <pre>mock-w-all                  Angular.js EE</pre>
 
@@ -803,7 +812,7 @@ ${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}(\?|\$)/))
 
 > HTTP GET - one (by id)
 
-**Description:** 
+**Description:**
 
 <pre>mock-w-one                  Angular.js EE</pre>
 
@@ -834,7 +843,7 @@ ${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}(\/)?([A-z0-9]
 
 > HTTP POST - create
 
-**Description:** 
+**Description:**
 
 <pre>mock-w-post                  Angular.js EE</pre>
 
@@ -859,7 +868,7 @@ ${1:\$httpBackend}.when('POST', regexpUrl(/${2:rest}\/${3:resource}\$/))
 
 > HTTP PUT - update
 
-**Description:** 
+**Description:**
 
 <pre>mock-w-put                  Angular.js EE</pre>
 
@@ -885,7 +894,7 @@ ${1:\$httpBackend}.when('PUT', regexpUrl(/${2:rest}\/${3:resource}(\/)?([A-z0-9]
 
 > HTTP DELETE
 
-**Description:** 
+**Description:**
 
 <pre>mock-w-delete                  Angular.js EE</pre>
 
@@ -918,7 +927,7 @@ ${1:\$httpBackend}.when('DELETE', regexpUrl(/${2:rest}\/${3:resource}(\/)?([A-z0
 
 > HTTP GET - search collection by value
 
-**Description:** 
+**Description:**
 
 <pre>mock-w-search                  Angular.js EE</pre>
 
@@ -954,7 +963,7 @@ ${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}\/${4:search}\
 
 #### Angular UI Router: [stateProvider]
 
-**Description:** 
+**Description:**
 
 <pre>stateProvider                  Angular UI Router</pre>
 
@@ -998,7 +1007,7 @@ ${2:  \$urlRouterProvider
 
 #### Angular UI Router: [state]
 
-**Description:** 
+**Description:**
 
 <pre>state                  Angular UI Router</pre>
 
@@ -1019,7 +1028,7 @@ state('${1:name}.${2:substate}', {
 
 #### Angular UI Router: [urlRouterProvider]
 
-**Description:** 
+**Description:**
 
 <pre>urlRouterProvider                  Angular UI Router</pre>
 
@@ -1033,7 +1042,7 @@ state('${1:name}.${2:substate}', {
 
 #### Angular UI Router: [when]
 
-**Description:** 
+**Description:**
 
 <pre>when                  Angular UI Router</pre>
 
@@ -1045,7 +1054,7 @@ when('$1', '/$2')$0
 
 #### Angular UI Router: [otherwise]
 
-**Description:** 
+**Description:**
 
 <pre>otherwise                  Angular UI Router</pre>
 
@@ -1059,7 +1068,7 @@ otherwise("/${1:redirectTo}")$0
 
 #### Angular.js: [module]
 
-**Description:** 
+**Description:**
 
 <pre>module                  Angular.js</pre>
 
@@ -1082,7 +1091,7 @@ module(
 
 #### Angular.js: [constant]
 
-**Description:** 
+**Description:**
 
 <pre>constant                  Angular.js</pre>
 
@@ -1094,7 +1103,7 @@ constant('${1:name}', ${2:value});
 
 #### Angular.js: [value]
 
-**Description:** 
+**Description:**
 
 <pre>value                  Angular.js</pre>
 
@@ -1106,7 +1115,7 @@ value('${1:name}', ${2:value});
 
 #### Angular.js: [config]
 
-**Description:** 
+**Description:**
 
 <pre>config                  Angular.js</pre>
 
@@ -1130,7 +1139,7 @@ function $3($1) {
 
 #### Angular.js: [run]
 
-**Description:** 
+**Description:**
 
 <pre>run                  Angular.js</pre>
 
@@ -1154,7 +1163,7 @@ function runner($1) {
 
 #### Angular.js: [filter]
 
-**Description:** 
+**Description:**
 
 <pre>filter                  Angular.js</pre>
 
@@ -1185,7 +1194,7 @@ function $1() {
 
 #### Angular.js: [decorator]
 
-**Description:** 
+**Description:**
 
 <pre>decorator                  Angular.js</pre>
 
@@ -1217,7 +1226,7 @@ function $4Delegate(${5:\$delegate}) {
 
 #### Angular.js: [provider]
 
-**Description:** 
+**Description:**
 
 <pre>provider                  Angular.js</pre>
 
@@ -1247,7 +1256,7 @@ function ${4:$1Get}($5) {
 
 #### Angular.js: [service]
 
-**Description:** 
+**Description:**
 
 <pre>service                  Angular.js</pre>
 
@@ -1282,7 +1291,7 @@ function $1($2) {
 
 #### Angular.js: [factory]
 
-**Description:** 
+**Description:**
 
 <pre>factory                  Angular.js</pre>
 
@@ -1309,7 +1318,7 @@ function $1($2) {
   //---
 
   function hiddenFunction() {
-    
+
     // TODO: define
 
   }
@@ -1319,7 +1328,7 @@ function $1($2) {
 
 #### Angular.js: [controller]
 
-**Description:** 
+**Description:**
 
 <pre>controller                  Angular.js</pre>
 
@@ -1348,7 +1357,7 @@ function $1Ctrl($2) {
 
 #### Angular.js: [directive]
 
-**Description:** 
+**Description:**
 
 <pre>directive                  Angular.js</pre>
 
@@ -1385,7 +1394,7 @@ function $1() {
 
 #### Angular.js: [directiveLong]
 
-**Description:** 
+**Description:**
 
 <pre>directiveLong                  Angular.js</pre>
 
@@ -1435,7 +1444,7 @@ function $1($2) {
   function ControllerFn() {
     var vm = this;$0
 
-    vm.min = 3; 
+    vm.min = 3;
     console.log('CTRL: vm.min = %i', vm.min);
     console.log('CTRL: vm.max = %i', vm.max);
   }
@@ -1469,7 +1478,7 @@ function $1($2) {
 
 ##### Angular.js: [resource-id]
 
-**Description:** 
+**Description:**
 
 <pre>resource-id                  Angular.js</pre>
 
@@ -1503,7 +1512,7 @@ function $1Resource(${2:\$resource}) {
 
 ##### Angular.js: [resource]
 
-**Description:** 
+**Description:**
 
 <pre>resource                  Angular.js</pre>
 
@@ -1533,7 +1542,7 @@ function $1Resource(${2:\$resource}) {
 
 ##### Angular.js: [routeProvider]
 
-**Description:** 
+**Description:**
 
 <pre>routeProvider                  Angular.js ngRoute</pre>
 
@@ -1567,7 +1576,7 @@ function configureRoutes(\$routeProvider) {
 
 ##### Angular.js: [when]
 
-**Description:** 
+**Description:**
 
 <pre>when                  Angular.js ngRoute</pre>
 
@@ -1586,7 +1595,7 @@ when(
 
 ##### Angular.js: [otherwise]
 
-**Description:** 
+**Description:**
 
 <pre>otherwise                  Angular.js ngRoute</pre>
 
@@ -1733,9 +1742,9 @@ otherwise(${1:{ redirectTo: '/${2:route}' \}})
 Completions won’t show in HTML unless you have added this line to your `User.sublime-preferences`:
 
 ```json
-"auto_complete_triggers": [ 
-  {"selector": "text.html", "characters": "<"}, 
-  {"selector": "text.html meta.tag", "characters": " " } 
+"auto_complete_triggers": [
+  {"selector": "text.html", "characters": "<"},
+  {"selector": "text.html meta.tag", "characters": " " }
 ]
 ```
 
