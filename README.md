@@ -1175,7 +1175,6 @@ function runner($1) {
 filter('${1:name}', $1);
 
 //---
-
 // https://docs.angularjs.org/guide/filter
 
 function $1() {
@@ -1184,7 +1183,7 @@ function $1() {
     input = input || '';
     var out = '';
 
-    ${0://TODO: define filter process code}
+    ${0:// TODO: define filter process code}
 
     return out;
   };
