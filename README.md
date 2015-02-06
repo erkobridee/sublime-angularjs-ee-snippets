@@ -1478,9 +1478,7 @@ function $1($2) {
 ```javascript
 factory('${1:Name}Resource', $1Resource);
 
-//---
-
-// https://docs.angularjs.org/api/ngResource/service/$resource
+//--- https://docs.angularjs.org/api/ngResource/service/$resource
 
 $1Resource.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
@@ -1512,9 +1510,7 @@ function $1Resource(${2:\$resource}) {
 ```javascript
 factory('${1:Name}Resource', $1Resource);
 
-//---
-
-// https://docs.angularjs.org/api/ngResource/service/$resource
+//--- https://docs.angularjs.org/api/ngResource/service/$resource
 
 $1Resource.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
