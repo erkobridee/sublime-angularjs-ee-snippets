@@ -974,9 +974,7 @@ ${1:\$httpBackend}.when('GET', regexpUrl(/${2:rest}\/${3:resource}\/${4:search}\
 ```javascript
 config(configureStates);
 
-//---
-
-// https://github.com/angular-ui/ui-router/wiki
+//--- https://github.com/angular-ui/ui-router/wiki
 
 configureStates.\$inject = ['\$stateProvider', '\$urlRouterProvider'];
 
@@ -985,7 +983,7 @@ function configureStates(\$stateProvider, \$urlRouterProvider) {
 ${2:  \$urlRouterProvider
     .when('', '/$1') // default
     .when('/', '/$1') // default
-    .otherwise("/404"); // For any unmatched url, redirect to /404
+    .otherwise('/404'); // For any unmatched url, redirect to /404
 }
   \$stateProvider
     .state('${1:state}', {
