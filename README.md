@@ -1359,9 +1359,7 @@ function $1Ctrl($2) {
 ```javascript
 directive('${1:name}', $1);
 
-//---
-
-// https://docs.angularjs.org/guide/directive
+//--- https://docs.angularjs.org/guide/directive
 
 function $1() {
 
