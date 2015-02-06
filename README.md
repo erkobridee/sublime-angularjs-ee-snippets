@@ -1174,8 +1174,7 @@ function runner($1) {
 ```javascript
 filter('${1:name}', $1);
 
-//---
-// https://docs.angularjs.org/guide/filter
+//--- https://docs.angularjs.org/guide/filter
 
 function $1() {
 
