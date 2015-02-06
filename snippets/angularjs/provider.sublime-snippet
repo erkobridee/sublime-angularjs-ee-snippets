@@ -2,20 +2,20 @@
   <content><![CDATA[
 provider('${1:name}', $1);
 
-//---
+//--- https://docs.angularjs.org/guide/providers
 
-$1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
+function $1() {
+  
+  this.\$get = $2;
 
-function $1($2) {
-  this.\$get = $4;
-}
+  //---
 
-$4.\$inject = [${5/(?:.+)/'/g}${5/,[ ]*/', '/g}${5/(?:.+)/',/g} $6];
+  $2.\$inject = [${3/(?:.+)/'/g}${3/,[ ]*/', '/g}${3/(?:.+)/',/g} $4];
 
-function ${4:$1Get}($5) {
-  return {
-    $0
-  };
+  function ${2:$1Get}($3) {
+    return {$0};
+  }
+
 }
 ]]></content>
   <tabTrigger>provider</tabTrigger>
