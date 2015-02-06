@@ -2,9 +2,7 @@
   <content><![CDATA[
 config(configureRoutes);
 
-//---
-
-// https://docs.angularjs.org/api/ngRoute
+//--- https://docs.angularjs.org/api/ngRoute
 
 configureRoutes.\$inject = ['\$routeProvider'];
 

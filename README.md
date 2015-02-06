@@ -1538,9 +1538,7 @@ function $1Resource(${2:\$resource}) {
 ```javascript
 config(configureRoutes);
 
-//---
-
-// https://docs.angularjs.org/api/ngRoute
+//--- https://docs.angularjs.org/api/ngRoute
 
 configureRoutes.\$inject = ['\$routeProvider'];
 
