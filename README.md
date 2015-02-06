@@ -1204,22 +1204,15 @@ function $1() {
 ```javascript
 decorator('${1:name}', $1Decorator);
 
-//---
+//--- https://docs.angularjs.org/api/auto/service/\$provide
 
 $1Decorator.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
-function $1Decorator(${2:\$provide}) {
-  \$provide.decorator('${4:name}', $4Delegate);
-}
+function $1Decorator(${2:\$delegate}) {
+  
+  // TODO: define decorator$0
 
-//---
-
-$4Delegate.\$inject = [${4/(?:.+)/'/g}${4/,[ ]*/', '/g}${4/(?:.+)/',/g} $6];
-
-function $4Delegate(${5:\$delegate}) {
-
-  return ${7:\$delegate}$0;
-
+  return ${7:\$delegate};
 }
 ```
 
