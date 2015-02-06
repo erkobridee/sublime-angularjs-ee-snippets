@@ -9,8 +9,8 @@ $1.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 function $1($2) {
 
   var service = {
-    attr: 'value',$0
-    func: hiddenFunction
+    attr: 'value',
+    func: hiddenFunction$0
   };
 
   return service;
