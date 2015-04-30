@@ -13,15 +13,17 @@ function $1($2) {
     func: hiddenFunction$0
   };
 
-  return service;
-
   //---
 
   function hiddenFunction() {
-    
+
     // TODO: define
 
   }
+
+  //---
+
+  return service;
 
 }
 ]]></content>

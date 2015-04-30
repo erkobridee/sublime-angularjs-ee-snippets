@@ -1302,8 +1302,6 @@ function $1($2) {
     func: hiddenFunction$0
   };
 
-  return service;
-
   //---
 
   function hiddenFunction() {
@@ -1311,6 +1309,10 @@ function $1($2) {
     // TODO: define
 
   }
+
+  //---
+
+  return service;
 
 }
 ```
