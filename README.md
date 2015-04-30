@@ -164,7 +164,7 @@ require({
 **Content:**
 
 ```javascript
-require('${1:path/file_js}');$0
+require('${1:path/file_js}')$0
 ```
 
 #### Require.js: [define]
