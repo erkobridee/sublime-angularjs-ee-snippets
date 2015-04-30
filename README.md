@@ -1368,8 +1368,6 @@ function $1() {
     link: $3
   };
 
-  return directive;
-
   //---
 
   function ${3:linkingFn}(scope, element, attrs) {
@@ -1377,6 +1375,10 @@ function $1() {
     ${0:// TODO: define code}
 
   }
+
+  //---
+
+  return directive;
 
 }
 ```
