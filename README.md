@@ -1229,7 +1229,7 @@ provider('${1:name}', $1);
 //--- https://docs.angularjs.org/guide/providers
 
 function $1() {
-  
+
   this.\$get = $2;
 
   //---
