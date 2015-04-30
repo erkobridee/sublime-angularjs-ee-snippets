@@ -1426,8 +1426,6 @@ function $1($2) {
     templateUrl: templateUrlFn
   };
 
-  return directive;
-
   //---
 
   // ControllerFn.\$inject = [];
@@ -1461,6 +1459,10 @@ function $1($2) {
   function templateUrlFn(tElement, tAttrs) {
     return 'path/directive/template.html';
   }
+
+  //---
+
+  return directive;
 
 }
 ```
