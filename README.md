@@ -1206,7 +1206,7 @@ decorator('${1:name}', $1Decorator);
 $1Decorator.\$inject = [${2/(?:.+)/'/g}${2/,[ ]*/', '/g}${2/(?:.+)/',/g} $3];
 
 function $1Decorator(${2:\$delegate}) {
-  
+
   // TODO: define decorator$0
 
   return ${7:\$delegate};
